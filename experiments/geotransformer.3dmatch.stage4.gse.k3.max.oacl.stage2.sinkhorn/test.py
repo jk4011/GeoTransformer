@@ -64,11 +64,14 @@ class Tester(SingleTester):
 
     def after_test_step(self, iteration, data_dict, output_dict, result_dict):
         scene_name = data_dict['scene_name']
-        ref_id = data_dict['ref_frame']
-        src_id = data_dict['src_frame']
-
+        src_file_name = data_dict['src_file_name'].split('.')[0]
+        ref_file_name = data_dict['ref_file_name'].split('.')[0]
+        
+        # todo : 스파게티 코드 수정
+        self.output_dir = "/data/wlsgur4011/part_assembly/result"
         ensure_dir(osp.join(self.output_dir, scene_name))
-        file_name = osp.join(self.output_dir, scene_name, f'{ref_id}_{src_id}.npz')
+        file_name = osp.join(self.output_dir, scene_name, f'{src_file_name}:file_name{ref_file_name}.npz')
+        
         np.savez_compressed(
             file_name,
             ref_points=release_cuda(output_dict['ref_points']),
@@ -88,7 +91,7 @@ class Tester(SingleTester):
             gt_node_corr_overlaps=release_cuda(output_dict['gt_node_corr_overlaps']),
             estimated_transform=release_cuda(output_dict['estimated_transform']),
             transform=release_cuda(data_dict['transform']),
-            overlap=data_dict['overlap'],
+            # overlap=data_dict['overlap'],
         )
 
 
