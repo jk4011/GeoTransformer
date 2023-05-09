@@ -2,6 +2,7 @@ import argparse
 import os.path as osp
 import time
 
+import torch
 import numpy as np
 
 from geotransformer.engine import SingleTester
@@ -70,7 +71,7 @@ class Tester(SingleTester):
         # todo : 스파게티 코드 수정
         self.output_dir = "/data/wlsgur4011/part_assembly/result"
         ensure_dir(osp.join(self.output_dir, scene_name))
-        file_name = osp.join(self.output_dir, scene_name, f'{src_file_name}:file_name{ref_file_name}.npz')
+        file_name = osp.join(self.output_dir, scene_name, f'{src_file_name}:{ref_file_name}.npz')
         
         np.savez_compressed(
             file_name,

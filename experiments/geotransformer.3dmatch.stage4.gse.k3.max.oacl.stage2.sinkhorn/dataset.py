@@ -16,14 +16,21 @@ from util.data import PairBreakingBadDataset
 import jhutil
 
 def train_valid_data_loader(cfg, distributed):
-    train_dataset = ThreeDMatchPairDataset(
-        cfg.data.dataset_root,
-        'train',
-        point_limit=cfg.train.point_limit,
-        use_augmentation=cfg.train.use_augmentation,
-        augmentation_noise=cfg.train.augmentation_noise,
-        augmentation_rotation=cfg.train.augmentation_rotation,
-    )
+    # train_dataset = ThreeDMatchPairDataset(
+    #     cfg.data.dataset_root,
+    #     'train',
+    #     point_limit=cfg.train.point_limit,
+    #     use_augmentation=cfg.train.use_augmentation,
+    #     augmentation_noise=cfg.train.augmentation_noise,
+    #     augmentation_rotation=cfg.train.augmentation_rotation,
+    # )
+    
+    datafolder = "/data/wlsgur4011/DataCollection/BreakingBad/data_split/"
+    artifact_train = f"{datafolder}artifact.train.pth"
+    artifact_val = f"{datafolder}artifact.val.pth"
+    train_dataset = PairBreakingBadDataset(artifact_train)
+    valid_dataset = PairBreakingBadDataset(artifact_val)
+    
     neighbor_limits = calibrate_neighbors_stack_mode(
         train_dataset,
         registration_collate_fn_stack_mode,
@@ -44,13 +51,12 @@ def train_valid_data_loader(cfg, distributed):
         distributed=distributed,
     )
 
-    valid_dataset = ThreeDMatchPairDataset(
-        cfg.data.dataset_root,
-        'val',
-        point_limit=cfg.test.point_limit,
-        use_augmentation=False,
-    )
-    valid_dataset = jhutil.GeoTransformerPseudoData()
+    # valid_dataset = ThreeDMatchPairDataset(
+    #     cfg.data.dataset_root,
+    #     'val',
+    #     point_limit=cfg.test.point_limit,
+    #     use_augmentation=False,
+    # )
     valid_loader = build_dataloader_stack_mode(
         valid_dataset,
         registration_collate_fn_stack_mode,
@@ -68,18 +74,19 @@ def train_valid_data_loader(cfg, distributed):
 
 
 def test_data_loader(cfg, benchmark):
-    train_dataset = ThreeDMatchPairDataset(
-        cfg.data.dataset_root,
-        'train',
-        point_limit=cfg.train.point_limit,
-        use_augmentation=cfg.train.use_augmentation,
-        augmentation_noise=cfg.train.augmentation_noise,
-        augmentation_rotation=cfg.train.augmentation_rotation,
-    )
-    torch.multiprocessing.set_start_method('spawn')
-    cfg2 = jhutil.load_yaml("/data/wlsgur4011/part_assembly/yamls/data_example.yaml")
-    train_data, val_data = build_geometry_dataset(cfg2)
-    train_dataset = PairBreakingBadDataset(train_data)
+    # train_dataset = ThreeDMatchPairDataset(
+    #     cfg.data.dataset_root,
+    #     'train',
+    #     point_limit=cfg.train.point_limit,
+    #     use_augmentation=cfg.train.use_augmentation,
+    #     augmentation_noise=cfg.train.augmentation_noise,
+    #     augmentation_rotation=cfg.train.augmentation_rotation,
+    # )
+    
+    datafolder = "/data/wlsgur4011/DataCollection/BreakingBad/data_split/"
+    artifact_train = f"{datafolder}artifact.train.pth"
+    train_dataset = PairBreakingBadDataset(artifact_train)
+    test_dataset = train_dataset
     
     neighbor_limits = calibrate_neighbors_stack_mode(
         train_dataset,
@@ -89,14 +96,13 @@ def test_data_loader(cfg, benchmark):
         cfg.backbone.init_radius,
     )
 
-    test_dataset = ThreeDMatchPairDataset(
-        cfg.data.dataset_root,
-        benchmark,
-        point_limit=cfg.test.point_limit,
-        use_augmentation=False,
-    )
+    # test_dataset = ThreeDMatchPairDataset(
+    #     cfg.data.dataset_root,
+    #     benchmark,
+    #     point_limit=cfg.test.point_limit,
+    #     use_augmentation=False,
+    # )
     
-    test_dataset = PairBreakingBadDataset(train_data)
     test_loader = build_dataloader_stack_mode(
         test_dataset,
         registration_collate_fn_stack_mode,
@@ -110,13 +116,3 @@ def test_data_loader(cfg, benchmark):
     )
 
     return test_loader, neighbor_limits
-
-
-def test_dataset(cfg, benchmark):
-    test_dataset = ThreeDMatchPairDataset(
-        cfg.data.dataset_root,
-        benchmark,
-        point_limit=cfg.test.point_limit,
-        use_augmentation=False,
-    )
-    return test_dataset
