@@ -1,0 +1,971 @@
+[41m1111  {
+    "scene_name": "artifact/84990_sf/fractured_22",
+    "dir_name": "/data/wlsgur4011/DataCollection/BreakingBad/data_split/artifact/84990_sf/fractured_22",
+    "src_file_name": "piece_6.obj",
+    "ref_file_name": "piece_3.obj",
+    "src_frame": 16,
+    "ref_frame": 13,
+    "transform": "tensor[4, 4] n=16 x∈[-2.853, 1.000] μ=-0.068 σ=1.100 cuda:1",
+    "features": "tensor[4190, 1] 16Kb x∈[1.000, 1.000] μ=1.000 σ=0. cuda:1",
+    "points": [
+        "tensor[4190, 3] n=12570 (49Kb) x∈[-1.550, 1.717] μ=1.244e-08 σ=0.587 cuda:1",
+        "tensor[3062, 3] n=9186 (36Kb) x∈[-1.550, 1.717] μ=0.003 σ=0.587 cuda:1",
+        "tensor[1563, 3] n=4689 (18Kb) x∈[-1.550, 1.717] μ=-0.001 σ=0.594 cuda:1",
+        "tensor[500, 3] n=1500 (5.9Kb) x∈[-1.503, 1.663] μ=-0.012 σ=0.606 cuda:1"
+    ],
+    "lengths": [
+        "tensor[2] i64 μ=2.095e+03 σ=94.752 cuda:1 [2162, 2028]",
+        "tensor[2] i64 μ=1.531e+03 σ=91.924 cuda:1 [1596, 1466]",
+        "tensor[2] i64 μ=781.500 σ=50.205 cuda:1 [817, 746]",
+        "tensor[2] i64 μ=250.000 σ=5.657 cuda:1 [254, 246]"
+    ],
+    "neighbors": [
+        "tensor[4190, 14] i64 n=58660 (0.4Mb) x∈[0, 4190] μ=3.511e+03 σ=1.198e+03 cuda:1",
+        "tensor[3062, 19] i64 n=58178 (0.4Mb) x∈[0, 3062] μ=2.189e+03 σ=1.010e+03 cuda:1",
+        "tensor[1563, 30] i64 n=46890 (0.4Mb) x∈[0, 1563] μ=1.027e+03 σ=520.030 cuda:1",
+        "tensor[500, 32] i64 n=16000 (0.1Mb) x∈[0, 500] μ=312.933 σ=164.499 cuda:1"
+    ],
+    "subsampling": [
+        "tensor[3062, 14] i64 n=42868 (0.3Mb) x∈[0, 4190] μ=3.554e+03 σ=1.173e+03 cuda:1",
+        "tensor[1563, 19] i64 n=29697 (0.2Mb) x∈[0, 3062] μ=2.218e+03 σ=1.007e+03 cuda:1",
+        "tensor[500, 29] i64 n=14500 (0.1Mb) x∈[0, 1563] μ=1.034e+03 σ=517.669 cuda:1"
+    ],
+    "upsampling": [
+        "tensor[4190, 19] i64 n=79610 (0.6Mb) x∈[0, 3062] μ=2.199e+03 σ=1.005e+03 cuda:1",
+        "tensor[3062, 30] i64 n=91860 (0.7Mb) x∈[0, 1563] μ=1.031e+03 σ=519.278 cuda:1",
+        "tensor[1563, 32] i64 n=50016 (0.4Mb) x∈[0, 500] μ=312.691 σ=165.277 cuda:1"
+    ],
+    "batch_size": 1
+}[0m
+[43m2222  {
+    "ref_points_c": "tensor[27, 3] n=81 x∈[-0.699, 0.734] μ=-0.005 σ=0.428 cuda:0",
+    "src_points_c": "tensor[15, 3] n=45 x∈[-0.603, 0.567] μ=-0.010 σ=0.331 cuda:0",
+    "ref_points_f": "tensor[202, 3] n=606 (2.4Kb) x∈[-0.709, 0.765] μ=0.005 σ=0.422 cuda:0",
+    "src_points_f": "tensor[172, 3] n=516 (2.0Kb) x∈[-0.603, 0.584] μ=-0.005 σ=0.322 cuda:0",
+    "ref_points": "tensor[4246, 3] n=12738 (50Kb) x∈[-0.715, 0.782] μ=-8.894e-08 σ=0.424 cuda:0",
+    "src_points": "tensor[4015, 3] n=12045 (47Kb) x∈[-0.605, 0.585] μ=-3.705e-08 σ=0.319 cuda:0",
+    "gt_node_corr_indices": "tensor[0, 2] i64 n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:0",
+    "gt_node_corr_overlaps": "tensor[0] \u001b[38;2;127;127;127mempty\u001b[0m cuda:0",
+    "ref_feats_c": "tensor[27, 256] n=6912 (27Kb) x∈[-0.206, 0.187] μ=0.005 σ=0.062 grad DivBackward0 cuda:0",
+    "src_feats_c": "tensor[15, 256] n=3840 (15Kb) x∈[-0.188, 0.205] μ=0.005 σ=0.062 grad DivBackward0 cuda:0",
+    "ref_feats_f": "tensor[202, 256] n=51712 (0.2Mb) x∈[-3.563, 2.898] μ=0.010 σ=0.534 grad SliceBackward0 cuda:0",
+    "src_feats_f": "tensor[172, 256] n=44032 (0.2Mb) x∈[-3.023, 2.773] μ=0.008 σ=0.567 grad SliceBackward0 cuda:0",
+    "ref_node_corr_indices": "tensor[256] i64 2Kb x∈[0, 26] μ=12.984 σ=8.111 cuda:0",
+    "src_node_corr_indices": "tensor[256] i64 2Kb x∈[0, 14] μ=7.109 σ=4.304 cuda:0",
+    "ref_node_corr_knn_points": "tensor[0, 27, 3] n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:0",
+    "src_node_corr_knn_points": "tensor[0, 15, 3] n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:0",
+    "ref_node_corr_knn_masks": "tensor[0, 27] bool n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:0",
+    "src_node_corr_knn_masks": "tensor[0, 15] bool n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:0",
+    "matching_scores": "tensor[0, 28, 16] n=0 \u001b[38;2;127;127;127mempty\u001b[0m grad SubBackward0 cuda:0",
+    "ref_corr_points": "tensor[0, 3] n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:0",
+    "src_corr_points": "tensor[0, 3] n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:0",
+    "corr_scores": "tensor[0] \u001b[38;2;127;127;127mempty\u001b[0m cuda:0",
+    "estimated_transform": "tensor[4, 4] n=16 x∈[0., 1.000] μ=0.250 σ=0.447 cuda:0"
+}[0m
+
+
+
+
+
+
+
+
+
+
+
+[43m2222  {
+    "ref_points_c": "tensor[254, 3] n=762 (3.0Kb) x∈[-1.503, 1.663] μ=0.006 σ=0.637 cuda:1",
+    "src_points_c": "tensor[246, 3] n=738 (2.9Kb) x∈[-1.097, 1.212] μ=-0.030 σ=0.573 cuda:1",
+    "ref_points_f": "tensor[1596, 3] n=4788 (19Kb) x∈[-1.550, 1.717] μ=0.006 σ=0.617 cuda:1",
+    "src_points_f": "tensor[1466, 3] n=4398 (17Kb) x∈[-1.150, 1.216] μ=-0.000 σ=0.553 cuda:1",
+    "ref_points": "tensor[2162, 3] n=6486 (25Kb) x∈[-1.550, 1.717] μ=1.059e-08 σ=0.616 cuda:1",
+    "src_points": "tensor[2028, 3] n=6084 (24Kb) x∈[-1.150, 1.216] μ=1.466e-08 σ=0.555 cuda:1",
+    "gt_node_corr_indices": "tensor[0, 2] i64 n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:1",
+    "gt_node_corr_overlaps": "tensor[0] \u001b[38;2;127;127;127mempty\u001b[0m cuda:1",
+    "ref_feats_c": "tensor[254, 256] n=65024 (0.2Mb) x∈[-0.207, 0.210] μ=0.004 σ=0.062 grad DivBackward0 cuda:1",
+    "src_feats_c": "tensor[246, 256] n=62976 (0.2Mb) x∈[-0.194, 0.203] μ=0.005 σ=0.062 grad DivBackward0 cuda:1",
+    "ref_feats_f": "tensor[1596, 256] n=408576 (1.6Mb) x∈[-3.754, 3.365] μ=0.021 σ=0.534 grad SliceBackward0 cuda:1",
+    "src_feats_f": "tensor[1466, 256] n=375296 (1.4Mb) x∈[-5.909, 4.172] μ=0.011 σ=0.562 grad SliceBackward0 cuda:1",
+    "ref_node_corr_indices": "tensor[256] i64 2Kb x∈[1, 253] μ=128.613 σ=75.792 cuda:1",
+    "src_node_corr_indices": "tensor[256] i64 2Kb x∈[2, 242] μ=133.625 σ=74.660 cuda:1",
+    "ref_node_corr_knn_points": "tensor[0, 64, 3] n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:1",
+    "src_node_corr_knn_points": "tensor[0, 64, 3] n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:1",
+    "ref_node_corr_knn_masks": "tensor[0, 64] bool n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:1",
+    "src_node_corr_knn_masks": "tensor[0, 64] bool n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:1",
+    "matching_scores": "tensor[0, 65, 65] n=0 \u001b[38;2;127;127;127mempty\u001b[0m grad SubBackward0 cuda:1",
+    "ref_corr_points": "tensor[0, 3] n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:1",
+    "src_corr_points": "tensor[0, 3] n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:1",
+    "corr_scores": "tensor[0] \u001b[38;2;127;127;127mempty\u001b[0m cuda:1",
+    "estimated_transform": "tensor[4, 4] n=16 x∈[0., 1.000] μ=0.250 σ=0.447 cuda:1"
+}[0m
+[41m1111  {
+    "scene_name": "artifact/133077_sf/mode_16",
+    "dir_name": "/data/wlsgur4011/DataCollection/BreakingBad/data_split/artifact/133077_sf/mode_16",
+    "src_file_name": "piece_9.obj",
+    "ref_file_name": "piece_11.obj",
+    "src_frame": 9,
+    "ref_frame": 2,
+    "transform": "tensor[4, 4] n=16 x∈[-3.810, 2.115] μ=0.080 σ=1.244 cuda:0",
+    "features": "tensor[3300, 1] 13Kb x∈[1.000, 1.000] μ=1.000 σ=0. cuda:0",
+    "points": [
+        "tensor[3300, 3] n=9900 (39Kb) x∈[-0.468, 0.799] μ=-8.573e-09 σ=0.267 cuda:0",
+        "tensor[239, 3] n=717 (2.8Kb) x∈[-0.464, 0.788] μ=0.004 σ=0.266 cuda:0",
+        "tensor[78, 3] n=234 x∈[-0.463, 0.784] μ=0.015 σ=0.266 cuda:0",
+        "tensor[32, 3] n=96 x∈[-0.457, 0.782] μ=0.011 σ=0.269 cuda:0"
+    ],
+    "lengths": [
+        "tensor[2] i64 μ=1.650e+03 σ=403.051 cuda:0 [1935, 1365]",
+        "tensor[2] i64 μ=119.500 σ=23.335 cuda:0 [136, 103]",
+        "tensor[2] i64 μ=39.000 σ=5.657 cuda:0 [43, 35]",
+        "tensor[2] i64 μ=16.000 σ=2.828 cuda:0 [18, 14]"
+    ],
+    "neighbors": [
+        "tensor[3300, 47] i64 n=155100 (1.2Mb) x∈[0, 3300] μ=1.650e+03 σ=951.839 cuda:0",
+        "tensor[239, 27] i64 n=6453 (50Kb) x∈[0, 239] μ=145.436 σ=78.411 cuda:0",
+        "tensor[78, 30] i64 n=2340 (18Kb) x∈[0, 78] μ=55.143 σ=25.081 cuda:0",
+        "tensor[32, 14] i64 n=448 (3.5Kb) x∈[0, 32] μ=19.815 σ=10.131 cuda:0"
+    ],
+    "subsampling": [
+        "tensor[239, 47] i64 n=11233 (88Kb) x∈[0, 3300] μ=1.680e+03 σ=953.691 cuda:0",
+        "tensor[78, 27] i64 n=2106 (16Kb) x∈[0, 239] μ=150.640 σ=78.658 cuda:0",
+        "tensor[32, 29] i64 n=928 (7.2Kb) x∈[0, 78] μ=54.367 σ=25.397 cuda:0"
+    ],
+    "upsampling": [
+        "tensor[3300, 27] i64 n=89100 (0.7Mb) x∈[0, 239] μ=141.813 σ=78.730 cuda:0",
+        "tensor[239, 30] i64 n=7170 (56Kb) x∈[0, 78] μ=54.252 σ=25.295 cuda:0",
+        "tensor[78, 14] i64 n=1092 (8.5Kb) x∈[0, 32] μ=19.931 σ=10.060 cuda:0"
+    ],
+    "batch_size": 1
+}[0m
+[43m2222  {
+    "ref_points_c": "tensor[18, 3] n=54 x∈[-0.457, 0.782] μ=0.017 σ=0.348 cuda:0",
+    "src_points_c": "tensor[14, 3] n=42 x∈[-0.226, 0.209] μ=0.003 σ=0.106 cuda:0",
+    "ref_points_f": "tensor[136, 3] n=408 (1.6Kb) x∈[-0.464, 0.788] μ=0.005 σ=0.343 cuda:0",
+    "src_points_f": "tensor[103, 3] n=309 (1.2Kb) x∈[-0.226, 0.211] μ=0.002 σ=0.096 cuda:0",
+    "ref_points": "tensor[1935, 3] n=5805 (23Kb) x∈[-0.468, 0.799] μ=-3.286e-10 σ=0.341 cuda:0",
+    "src_points": "tensor[1365, 3] n=4095 (16Kb) x∈[-0.242, 0.219] μ=-2.003e-08 σ=0.092 cuda:0",
+    "gt_node_corr_indices": "tensor[0, 2] i64 n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:0",
+    "gt_node_corr_overlaps": "tensor[0] \u001b[38;2;127;127;127mempty\u001b[0m cuda:0",
+    "ref_feats_c": "tensor[18, 256] n=4608 (18Kb) x∈[-0.213, 0.183] μ=0.005 σ=0.062 grad DivBackward0 cuda:0",
+    "src_feats_c": "tensor[14, 256] n=3584 (14Kb) x∈[-0.196, 0.186] μ=0.005 σ=0.062 grad DivBackward0 cuda:0",
+    "ref_feats_f": "tensor[136, 256] n=34816 (0.1Mb) x∈[-2.512, 2.186] μ=0.008 σ=0.586 grad SliceBackward0 cuda:0",
+    "src_feats_f": "tensor[103, 256] n=26368 (0.1Mb) x∈[-2.232, 1.858] μ=0.010 σ=0.496 grad SliceBackward0 cuda:0",
+    "ref_node_corr_indices": "tensor[252] i64 2.0Kb x∈[0, 17] μ=8.500 σ=5.198 cuda:0",
+    "src_node_corr_indices": "tensor[252] i64 2.0Kb x∈[0, 13] μ=6.500 σ=4.039 cuda:0",
+    "ref_node_corr_knn_points": "tensor[0, 18, 3] n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:0",
+    "src_node_corr_knn_points": "tensor[0, 14, 3] n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:0",
+    "ref_node_corr_knn_masks": "tensor[0, 18] bool n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:0",
+    "src_node_corr_knn_masks": "tensor[0, 14] bool n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:0",
+    "matching_scores": "tensor[0, 19, 15] n=0 \u001b[38;2;127;127;127mempty\u001b[0m grad SubBackward0 cuda:0",
+    "ref_corr_points": "tensor[0, 3] n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:0",
+    "src_corr_points": "tensor[0, 3] n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:0",
+    "corr_scores": "tensor[0] \u001b[38;2;127;127;127mempty\u001b[0m cuda:0",
+    "estimated_transform": "tensor[4, 4] n=16 x∈[0., 1.000] μ=0.250 σ=0.447 cuda:0"
+}[0m
+[41m1111  {
+    "scene_name": "artifact/96483_sf/fractured_45",
+    "dir_name": "/data/wlsgur4011/DataCollection/BreakingBad/data_split/artifact/96483_sf/fractured_45",
+    "src_file_name": "piece_7.obj",
+    "ref_file_name": "piece_6.obj",
+    "src_frame": 16,
+    "ref_frame": 15,
+    "transform": "tensor[4, 4] n=16 x∈[-2.637, 1.000] μ=-0.238 σ=0.854 cuda:1",
+    "features": "tensor[8697, 1] 34Kb x∈[1.000, 1.000] μ=1.000 σ=0. cuda:1",
+    "points": [
+        "tensor[8697, 3] n=26091 (102Kb) x∈[-1.120, 1.401] μ=-3.319e-08 σ=0.465 cuda:1",
+        "tensor[1857, 3] n=5571 (22Kb) x∈[-1.114, 1.401] μ=0.003 σ=0.463 cuda:1",
+        "tensor[566, 3] n=1698 (6.6Kb) x∈[-1.114, 1.401] μ=0.008 σ=0.469 cuda:1",
+        "tensor[166, 3] n=498 (1.9Kb) x∈[-1.096, 1.401] μ=0.005 σ=0.474 cuda:1"
+    ],
+    "lengths": [
+        "tensor[2] i64 μ=4.348e+03 σ=5.513e+03 cuda:1 [8247, 450]",
+        "tensor[2] i64 μ=928.500 σ=1.162e+03 cuda:1 [1750, 107]",
+        "tensor[2] i64 μ=283.000 σ=343.654 cuda:1 [526, 40]",
+        "tensor[2] i64 μ=83.000 σ=94.752 cuda:1 [150, 16]"
+    ],
+    "neighbors": [
+        "tensor[8697, 47] i64 n=408759 (3.1Mb) x∈[0, 8697] μ=5.958e+03 σ=2.897e+03 cuda:1",
+        "tensor[1857, 27] i64 n=50139 (0.4Mb) x∈[0, 1857] μ=1.060e+03 σ=592.175 cuda:1",
+        "tensor[566, 30] i64 n=16980 (0.1Mb) x∈[0, 566] μ=333.101 σ=181.476 cuda:1",
+        "tensor[166, 32] i64 n=5312 (42Kb) x∈[0, 166] μ=105.494 σ=55.201 cuda:1"
+    ],
+    "subsampling": [
+        "tensor[1857, 47] i64 n=87279 (0.7Mb) x∈[0, 8697] μ=6.084e+03 σ=2.887e+03 cuda:1",
+        "tensor[566, 27] i64 n=15282 (0.1Mb) x∈[0, 1857] μ=1.104e+03 σ=603.663 cuda:1",
+        "tensor[166, 30] i64 n=4980 (39Kb) x∈[0, 566] μ=353.266 σ=185.206 cuda:1"
+    ],
+    "upsampling": [
+        "tensor[8697, 27] i64 n=234819 (1.8Mb) x∈[0, 1857] μ=1.067e+03 σ=593.840 cuda:1",
+        "tensor[1857, 30] i64 n=55710 (0.4Mb) x∈[0, 566] μ=331.554 σ=180.720 cuda:1",
+        "tensor[566, 32] i64 n=18112 (0.1Mb) x∈[0, 166] μ=102.395 σ=54.970 cuda:1"
+    ],
+    "batch_size": 1
+}[0m
+[43m2222  {
+    "ref_points_c": "tensor[150, 3] n=450 (1.8Kb) x∈[-1.096, 1.401] μ=0.005 σ=0.496 cuda:1",
+    "src_points_c": "tensor[16, 3] n=48 x∈[-0.232, 0.295] μ=0.006 σ=0.157 cuda:1",
+    "ref_points_f": "tensor[1750, 3] n=5250 (21Kb) x∈[-1.114, 1.401] μ=0.003 σ=0.475 cuda:1",
+    "src_points_f": "tensor[107, 3] n=321 (1.3Kb) x∈[-0.268, 0.351] μ=-0.006 σ=0.157 cuda:1",
+    "ref_points": "tensor[8247, 3] n=24741 (97Kb) x∈[-1.120, 1.401] μ=-2.559e-08 σ=0.476 cuda:1",
+    "src_points": "tensor[450, 3] n=1350 (5.3Kb) x∈[-0.274, 0.351] μ=-1.657e-07 σ=0.157 cuda:1",
+    "gt_node_corr_indices": "tensor[0, 2] i64 n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:1",
+    "gt_node_corr_overlaps": "tensor[0] \u001b[38;2;127;127;127mempty\u001b[0m cuda:1",
+    "ref_feats_c": "tensor[150, 256] n=38400 (0.1Mb) x∈[-0.211, 0.215] μ=0.006 σ=0.062 grad DivBackward0 cuda:1",
+    "src_feats_c": "tensor[16, 256] n=4096 (16Kb) x∈[-0.180, 0.211] μ=0.004 σ=0.062 grad DivBackward0 cuda:1",
+    "ref_feats_f": "tensor[1750, 256] n=448000 (1.7Mb) x∈[-4.895, 4.538] μ=0.012 σ=0.506 grad SliceBackward0 cuda:1",
+    "src_feats_f": "tensor[107, 256] n=27392 (0.1Mb) x∈[-3.767, 3.204] μ=0.016 σ=0.875 grad SliceBackward0 cuda:1",
+    "ref_node_corr_indices": "tensor[256] i64 2Kb x∈[0, 148] μ=69.039 σ=43.402 cuda:1",
+    "src_node_corr_indices": "tensor[256] i64 2Kb x∈[0, 15] μ=7.137 σ=5.104 cuda:1",
+    "ref_node_corr_knn_points": "tensor[0, 64, 3] n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:1",
+    "src_node_corr_knn_points": "tensor[0, 16, 3] n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:1",
+    "ref_node_corr_knn_masks": "tensor[0, 64] bool n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:1",
+    "src_node_corr_knn_masks": "tensor[0, 16] bool n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:1",
+    "matching_scores": "tensor[0, 65, 17] n=0 \u001b[38;2;127;127;127mempty\u001b[0m grad SubBackward0 cuda:1",
+    "ref_corr_points": "tensor[0, 3] n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:1",
+    "src_corr_points": "tensor[0, 3] n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:1",
+    "corr_scores": "tensor[0] \u001b[38;2;127;127;127mempty\u001b[0m cuda:1",
+    "estimated_transform": "tensor[4, 4] n=16 x∈[0., 1.000] μ=0.250 σ=0.447 cuda:1"
+}[0m
+[41m1111  {
+    "scene_name": "artifact/682289_sf/fractured_31",
+    "dir_name": "/data/wlsgur4011/DataCollection/BreakingBad/data_split/artifact/682289_sf/fractured_31",
+    "src_file_name": "piece_9.obj",
+    "ref_file_name": "piece_5.obj",
+    "src_frame": 11,
+    "ref_frame": 7,
+    "transform": "tensor[4, 4] n=16 x∈[-1.838, 1.000] μ=-0.240 σ=0.664 cuda:0",
+    "features": "tensor[7616, 1] 30Kb x∈[1.000, 1.000] μ=1.000 σ=0. cuda:0",
+    "points": [
+        "tensor[7616, 3] n=22848 (89Kb) x∈[-0.334, 0.304] μ=1.828e-08 σ=0.152 cuda:0",
+        "tensor[402, 3] n=1206 (4.7Kb) x∈[-0.321, 0.303] μ=-0.000 σ=0.153 cuda:0",
+        "tensor[136, 3] n=408 (1.6Kb) x∈[-0.317, 0.303] μ=-4.787e-05 σ=0.154 cuda:0",
+        "tensor[54, 3] n=162 x∈[-0.287, 0.290] μ=-0.000 σ=0.155 cuda:0"
+    ],
+    "lengths": [
+        "tensor[2] i64 μ=3.808e+03 σ=33.941 cuda:0 [3784, 3832]",
+        "tensor[2] i64 μ=201.000 σ=12.728 cuda:0 [192, 210]",
+        "tensor[2] i64 μ=68.000 σ=5.657 cuda:0 [64, 72]",
+        "tensor[2] i64 μ=27.000 σ=4.243 cuda:0 [24, 30]"
+    ],
+    "neighbors": [
+        "tensor[7616, 47] i64 n=357952 (2.7Mb) x∈[0, 7615] μ=3.808e+03 σ=2.197e+03 cuda:0",
+        "tensor[402, 27] i64 n=10854 (85Kb) x∈[0, 402] μ=256.558 σ=132.716 cuda:0",
+        "tensor[136, 22] i64 n=2992 (23Kb) x∈[0, 136] μ=89.790 σ=44.616 cuda:0",
+        "tensor[54, 30] i64 n=1620 (13Kb) x∈[0, 54] μ=33.228 σ=17.610 cuda:0"
+    ],
+    "subsampling": [
+        "tensor[402, 47] i64 n=18894 (0.1Mb) x∈[0, 7615] μ=3.882e+03 σ=2.200e+03 cuda:0",
+        "tensor[136, 26] i64 n=3536 (28Kb) x∈[0, 402] μ=254.319 σ=132.561 cuda:0",
+        "tensor[54, 23] i64 n=1242 (9.7Kb) x∈[0, 136] μ=93.513 σ=43.637 cuda:0"
+    ],
+    "upsampling": [
+        "tensor[7616, 27] i64 n=205632 (1.6Mb) x∈[0, 402] μ=254.885 σ=133.858 cuda:0",
+        "tensor[402, 22] i64 n=8844 (69Kb) x∈[0, 136] μ=88.889 σ=45.072 cuda:0",
+        "tensor[136, 30] i64 n=4080 (32Kb) x∈[0, 54] μ=32.683 σ=17.821 cuda:0"
+    ],
+    "batch_size": 1
+}[0m
+[41m1111  {
+    "scene_name": "artifact/1344043_sf/fractured_61",
+    "dir_name": "/data/wlsgur4011/DataCollection/BreakingBad/data_split/artifact/1344043_sf/fractured_61",
+    "src_file_name": "piece_6.obj",
+    "ref_file_name": "piece_10.obj",
+    "src_frame": 9,
+    "ref_frame": 2,
+    "transform": "tensor[4, 4] n=16 x∈[-1.562, 5.296] μ=0.028 σ=1.553 cuda:1",
+    "features": "tensor[6513, 1] 25Kb x∈[1.000, 1.000] μ=1.000 σ=0. cuda:1",
+    "points": [
+        "tensor[6513, 3] n=19539 (76Kb) x∈[-0.335, 0.393] μ=-1.176e-08 σ=0.152 cuda:1",
+        "tensor[610, 3] n=1830 (7.1Kb) x∈[-0.328, 0.389] μ=0.001 σ=0.157 cuda:1",
+        "tensor[177, 3] n=531 (2.1Kb) x∈[-0.319, 0.351] μ=-0.002 σ=0.159 cuda:1",
+        "tensor[57, 3] n=171 x∈[-0.282, 0.302] μ=-0.003 σ=0.163 cuda:1"
+    ],
+    "lengths": [
+        "tensor[2] i64 μ=3.256e+03 σ=1.725e+03 cuda:1 [4476, 2037]",
+        "tensor[2] i64 μ=305.000 σ=147.078 cuda:1 [409, 201]",
+        "tensor[2] i64 μ=88.500 σ=37.477 cuda:1 [115, 62]",
+        "tensor[2] i64 μ=28.500 σ=9.192 cuda:1 [35, 22]"
+    ],
+    "neighbors": [
+        "tensor[6513, 47] i64 n=306111 (2.3Mb) x∈[0, 6513] μ=3.288e+03 σ=1.896e+03 cuda:1",
+        "tensor[610, 27] i64 n=16470 (0.1Mb) x∈[0, 610] μ=350.637 σ=193.540 cuda:1",
+        "tensor[177, 30] i64 n=5310 (41Kb) x∈[0, 177] μ=108.808 σ=58.785 cuda:1",
+        "tensor[57, 32] i64 n=1824 (14Kb) x∈[0, 57] μ=35.132 σ=19.205 cuda:1"
+    ],
+    "subsampling": [
+        "tensor[610, 47] i64 n=28670 (0.2Mb) x∈[0, 6513] μ=3.361e+03 σ=1.914e+03 cuda:1",
+        "tensor[177, 27] i64 n=4779 (37Kb) x∈[0, 610] μ=369.789 σ=196.613 cuda:1",
+        "tensor[57, 30] i64 n=1710 (13Kb) x∈[0, 177] μ=115.023 σ=58.805 cuda:1"
+    ],
+    "upsampling": [
+        "tensor[6513, 27] i64 n=175851 (1.3Mb) x∈[0, 610] μ=347.510 σ=192.731 cuda:1",
+        "tensor[610, 30] i64 n=18300 (0.1Mb) x∈[0, 177] μ=108.370 σ=58.905 cuda:1",
+        "tensor[177, 32] i64 n=5664 (44Kb) x∈[0, 57] μ=33.555 σ=19.261 cuda:1"
+    ],
+    "batch_size": 1
+}[0m
+[43m2222  {
+    "ref_points_c": "tensor[24, 3] n=72 x∈[-0.229, 0.231] μ=-0.000 σ=0.150 cuda:0",
+    "src_points_c": "tensor[30, 3] n=90 x∈[-0.287, 0.290] μ=-0.000 σ=0.159 cuda:0",
+    "ref_points_f": "tensor[192, 3] n=576 (2.2Kb) x∈[-0.255, 0.260] μ=0.001 σ=0.146 cuda:0",
+    "src_points_f": "tensor[210, 3] n=630 (2.5Kb) x∈[-0.321, 0.303] μ=-0.002 σ=0.158 cuda:0",
+    "ref_points": "tensor[3784, 3] n=11352 (44Kb) x∈[-0.260, 0.262] μ=3.234e-08 σ=0.146 cuda:0",
+    "src_points": "tensor[3832, 3] n=11496 (45Kb) x∈[-0.334, 0.304] μ=4.521e-09 σ=0.157 cuda:0",
+    "gt_node_corr_indices": "tensor[0, 2] i64 n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:0",
+    "gt_node_corr_overlaps": "tensor[0] \u001b[38;2;127;127;127mempty\u001b[0m cuda:0",
+    "ref_feats_c": "tensor[24, 256] n=6144 (24Kb) x∈[-0.194, 0.206] μ=0.005 σ=0.062 grad DivBackward0 cuda:0",
+    "src_feats_c": "tensor[30, 256] n=7680 (30Kb) x∈[-0.186, 0.208] μ=0.005 σ=0.062 grad DivBackward0 cuda:0",
+    "ref_feats_f": "tensor[192, 256] n=49152 (0.2Mb) x∈[-2.058, 1.942] μ=0.006 σ=0.520 grad SliceBackward0 cuda:0",
+    "src_feats_f": "tensor[210, 256] n=53760 (0.2Mb) x∈[-3.164, 2.362] μ=0.011 σ=0.570 grad SliceBackward0 cuda:0",
+    "ref_node_corr_indices": "tensor[256] i64 2Kb x∈[0, 23] μ=11.711 σ=6.982 cuda:0",
+    "src_node_corr_indices": "tensor[256] i64 2Kb x∈[0, 29] μ=14.480 σ=8.705 cuda:0",
+    "ref_node_corr_knn_points": "tensor[0, 24, 3] n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:0",
+    "src_node_corr_knn_points": "tensor[0, 30, 3] n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:0",
+    "ref_node_corr_knn_masks": "tensor[0, 24] bool n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:0",
+    "src_node_corr_knn_masks": "tensor[0, 30] bool n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:0",
+    "matching_scores": "tensor[0, 25, 31] n=0 \u001b[38;2;127;127;127mempty\u001b[0m grad SubBackward0 cuda:0",
+    "ref_corr_points": "tensor[0, 3] n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:0",
+    "src_corr_points": "tensor[0, 3] n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:0",
+    "corr_scores": "tensor[0] \u001b[38;2;127;127;127mempty\u001b[0m cuda:0",
+    "estimated_transform": "tensor[4, 4] n=16 x∈[0., 1.000] μ=0.250 σ=0.447 cuda:0"
+}[0m
+[43m2222  {
+    "ref_points_c": "tensor[35, 3] n=105 x∈[-0.282, 0.302] μ=0.010 σ=0.171 cuda:1",
+    "src_points_c": "tensor[22, 3] n=66 x∈[-0.255, 0.268] μ=-0.023 σ=0.147 cuda:1",
+    "ref_points_f": "tensor[409, 3] n=1227 (4.8Kb) x∈[-0.328, 0.389] μ=0.000 σ=0.166 cuda:1",
+    "src_points_f": "tensor[201, 3] n=603 (2.4Kb) x∈[-0.307, 0.310] μ=0.001 σ=0.136 cuda:1",
+    "ref_points": "tensor[4476, 3] n=13428 (52Kb) x∈[-0.335, 0.393] μ=-5.114e-09 σ=0.160 cuda:1",
+    "src_points": "tensor[2037, 3] n=6111 (24Kb) x∈[-0.309, 0.312] μ=-2.563e-08 σ=0.132 cuda:1",
+    "gt_node_corr_indices": "tensor[0, 2] i64 n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:1",
+    "gt_node_corr_overlaps": "tensor[0] \u001b[38;2;127;127;127mempty\u001b[0m cuda:1",
+    "ref_feats_c": "tensor[35, 256] n=8960 (35Kb) x∈[-0.226, 0.217] μ=0.005 σ=0.062 grad DivBackward0 cuda:1",
+    "src_feats_c": "tensor[22, 256] n=5632 (22Kb) x∈[-0.196, 0.186] μ=0.005 σ=0.062 grad DivBackward0 cuda:1",
+    "ref_feats_f": "tensor[409, 256] n=104704 (0.4Mb) x∈[-2.982, 2.952] μ=0.006 σ=0.557 grad SliceBackward0 cuda:1",
+    "src_feats_f": "tensor[201, 256] n=51456 (0.2Mb) x∈[-2.250, 2.141] μ=0.010 σ=0.491 grad SliceBackward0 cuda:1",
+    "ref_node_corr_indices": "tensor[256] i64 2Kb x∈[0, 34] μ=17.137 σ=10.260 cuda:1",
+    "src_node_corr_indices": "tensor[256] i64 2Kb x∈[0, 21] μ=10.539 σ=6.280 cuda:1",
+    "ref_node_corr_knn_points": "tensor[0, 35, 3] n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:1",
+    "src_node_corr_knn_points": "tensor[0, 22, 3] n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:1",
+    "ref_node_corr_knn_masks": "tensor[0, 35] bool n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:1",
+    "src_node_corr_knn_masks": "tensor[0, 22] bool n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:1",
+    "matching_scores": "tensor[0, 36, 23] n=0 \u001b[38;2;127;127;127mempty\u001b[0m grad SubBackward0 cuda:1",
+    "ref_corr_points": "tensor[0, 3] n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:1",
+    "src_corr_points": "tensor[0, 3] n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:1",
+    "corr_scores": "tensor[0] \u001b[38;2;127;127;127mempty\u001b[0m cuda:1",
+    "estimated_transform": "tensor[4, 4] n=16 x∈[0., 1.000] μ=0.250 σ=0.447 cuda:1"
+}[0m
+[41m1111  {
+    "scene_name": "artifact/75275_sf/mode_10",
+    "dir_name": "/data/wlsgur4011/DataCollection/BreakingBad/data_split/artifact/75275_sf/mode_10",
+    "src_file_name": "piece_7.obj",
+    "ref_file_name": "piece_3.obj",
+    "src_frame": 9,
+    "ref_frame": 5,
+    "transform": "tensor[4, 4] n=16 x∈[-3.429, 1.000] μ=-0.040 σ=1.059 cuda:0",
+    "features": "tensor[7523, 1] 29Kb x∈[1.000, 1.000] μ=1.000 σ=0. cuda:0",
+    "points": [
+        "tensor[7523, 3] n=22569 (88Kb) x∈[-1.090, 1.101] μ=3.841e-08 σ=0.344 cuda:0",
+        "tensor[1477, 3] n=4431 (17Kb) x∈[-1.075, 1.101] μ=-0.001 σ=0.352 cuda:0",
+        "tensor[444, 3] n=1332 (5.2Kb) x∈[-1.072, 1.101] μ=-0.008 σ=0.361 cuda:0",
+        "tensor[140, 3] n=420 (1.6Kb) x∈[-1.072, 1.084] μ=-0.021 σ=0.372 cuda:0"
+    ],
+    "lengths": [
+        "tensor[2] i64 μ=3.762e+03 σ=2.420e+03 cuda:0 [2050, 5473]",
+        "tensor[2] i64 μ=738.500 σ=463.155 cuda:0 [411, 1066]",
+        "tensor[2] i64 μ=222.000 σ=130.108 cuda:0 [130, 314]",
+        "tensor[2] i64 μ=70.000 σ=41.012 cuda:0 [41, 99]"
+    ],
+    "neighbors": [
+        "tensor[7523, 47] i64 n=353581 (2.7Mb) x∈[0, 7523] μ=4.941e+03 σ=2.494e+03 cuda:0",
+        "tensor[1477, 27] i64 n=39879 (0.3Mb) x∈[0, 1477] μ=848.838 σ=468.293 cuda:0",
+        "tensor[444, 30] i64 n=13320 (0.1Mb) x∈[0, 444] μ=272.532 σ=144.007 cuda:0",
+        "tensor[140, 32] i64 n=4480 (35Kb) x∈[0, 140] μ=94.071 σ=45.068 cuda:0"
+    ],
+    "subsampling": [
+        "tensor[1477, 47] i64 n=69419 (0.5Mb) x∈[0, 7523] μ=5.024e+03 σ=2.508e+03 cuda:0",
+        "tensor[444, 27] i64 n=11988 (94Kb) x∈[0, 1477] μ=869.547 σ=480.326 cuda:0",
+        "tensor[140, 30] i64 n=4200 (33Kb) x∈[0, 444] μ=280.935 σ=147.545 cuda:0"
+    ],
+    "upsampling": [
+        "tensor[7523, 27] i64 n=203121 (1.5Mb) x∈[0, 1477] μ=853.584 σ=466.346 cuda:0",
+        "tensor[1477, 30] i64 n=44310 (0.3Mb) x∈[0, 444] μ=273.128 σ=142.775 cuda:0",
+        "tensor[444, 32] i64 n=14208 (0.1Mb) x∈[0, 140] μ=92.555 σ=44.867 cuda:0"
+    ],
+    "batch_size": 1
+}[0m
+[43m2222  {
+    "ref_points_c": "tensor[41, 3] n=123 x∈[-0.859, 1.084] μ=-0.005 σ=0.462 cuda:0",
+    "src_points_c": "tensor[99, 3] n=297 (1.2Kb) x∈[-1.072, 0.710] μ=-0.027 σ=0.329 cuda:0",
+    "ref_points_f": "tensor[411, 3] n=1233 (4.8Kb) x∈[-0.903, 1.101] μ=0.002 σ=0.457 cuda:0",
+    "src_points_f": "tensor[1066, 3] n=3198 (12Kb) x∈[-1.075, 0.761] μ=-0.003 σ=0.301 cuda:0",
+    "ref_points": "tensor[2050, 3] n=6150 (24Kb) x∈[-0.903, 1.101] μ=-1.861e-09 σ=0.448 cuda:0",
+    "src_points": "tensor[5473, 3] n=16419 (64Kb) x∈[-1.090, 0.765] μ=5.355e-08 σ=0.296 cuda:0",
+    "gt_node_corr_indices": "tensor[0, 2] i64 n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:0",
+    "gt_node_corr_overlaps": "tensor[0] \u001b[38;2;127;127;127mempty\u001b[0m cuda:0",
+    "ref_feats_c": "tensor[41, 256] n=10496 (41Kb) x∈[-0.191, 0.201] μ=0.005 σ=0.062 grad DivBackward0 cuda:0",
+    "src_feats_c": "tensor[99, 256] n=25344 (99Kb) x∈[-0.203, 0.222] μ=0.004 σ=0.062 grad DivBackward0 cuda:0",
+    "ref_feats_f": "tensor[411, 256] n=105216 (0.4Mb) x∈[-2.664, 2.637] μ=0.014 σ=0.529 grad SliceBackward0 cuda:0",
+    "src_feats_f": "tensor[1066, 256] n=272896 (1.0Mb) x∈[-7.676, 7.752] μ=0.010 σ=0.521 grad SliceBackward0 cuda:0",
+    "ref_node_corr_indices": "tensor[256] i64 2Kb x∈[1, 40] μ=21.395 σ=10.753 cuda:0",
+    "src_node_corr_indices": "tensor[256] i64 2Kb x∈[0, 98] μ=51.379 σ=27.576 cuda:0",
+    "ref_node_corr_knn_points": "tensor[0, 41, 3] n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:0",
+    "src_node_corr_knn_points": "tensor[0, 64, 3] n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:0",
+    "ref_node_corr_knn_masks": "tensor[0, 41] bool n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:0",
+    "src_node_corr_knn_masks": "tensor[0, 64] bool n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:0",
+    "matching_scores": "tensor[0, 42, 65] n=0 \u001b[38;2;127;127;127mempty\u001b[0m grad SubBackward0 cuda:0",
+    "ref_corr_points": "tensor[0, 3] n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:0",
+    "src_corr_points": "tensor[0, 3] n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:0",
+    "corr_scores": "tensor[0] \u001b[38;2;127;127;127mempty\u001b[0m cuda:0",
+    "estimated_transform": "tensor[4, 4] n=16 x∈[0., 1.000] μ=0.250 σ=0.447 cuda:0"
+}[0m
+[41m1111  {
+    "scene_name": "artifact/86379_sf/fractured_47",
+    "dir_name": "/data/wlsgur4011/DataCollection/BreakingBad/data_split/artifact/86379_sf/fractured_47",
+    "src_file_name": "piece_4.obj",
+    "ref_file_name": "piece_3.obj",
+    "src_frame": 4,
+    "ref_frame": 3,
+    "transform": "tensor[4, 4] n=16 x∈[-4.599, 1.000] μ=-0.532 σ=1.234 cuda:1",
+    "features": "tensor[8859, 1] 35Kb x∈[1.000, 1.000] μ=1.000 σ=0. cuda:1",
+    "points": [
+        "tensor[8859, 3] n=26577 (0.1Mb) x∈[-0.790, 0.719] μ=-1.464e-08 σ=0.379 cuda:1",
+        "tensor[216, 3] n=648 (2.5Kb) x∈[-0.775, 0.711] μ=-0.001 σ=0.391 cuda:1",
+        "tensor[74, 3] n=222 x∈[-0.775, 0.711] μ=-0.002 σ=0.397 cuda:1",
+        "tensor[31, 3] n=93 x∈[-0.767, 0.702] μ=0.023 σ=0.375 cuda:1"
+    ],
+    "lengths": [
+        "tensor[2] i64 μ=4.430e+03 σ=2.388e+03 cuda:1 [6118, 2741]",
+        "tensor[2] i64 μ=108.000 σ=72.125 cuda:1 [159, 57]",
+        "tensor[2] i64 μ=37.000 σ=25.456 cuda:1 [55, 19]",
+        "tensor[2] i64 μ=15.500 σ=7.778 cuda:1 [21, 10]"
+    ],
+    "neighbors": [
+        "tensor[8859, 47] i64 n=416373 (3.2Mb) x∈[0, 8858] μ=4.428e+03 σ=2.554e+03 cuda:1",
+        "tensor[216, 27] i64 n=5832 (46Kb) x∈[0, 216] μ=138.844 σ=72.643 cuda:1",
+        "tensor[74, 17] i64 n=1258 (9.8Kb) x∈[0, 74] μ=47.641 σ=25.269 cuda:1",
+        "tensor[31, 10] i64 n=310 (2.4Kb) x∈[0, 31] μ=20.203 σ=10.034 cuda:1"
+    ],
+    "subsampling": [
+        "tensor[216, 47] i64 n=10152 (79Kb) x∈[0, 8858] μ=4.223e+03 σ=2.497e+03 cuda:1",
+        "tensor[74, 27] i64 n=1998 (16Kb) x∈[0, 216] μ=139.980 σ=72.393 cuda:1",
+        "tensor[31, 17] i64 n=527 (4.1Kb) x∈[0, 74] μ=49.378 σ=24.590 cuda:1"
+    ],
+    "upsampling": [
+        "tensor[8859, 27] i64 n=239193 (1.8Mb) x∈[0, 216] μ=139.083 σ=71.751 cuda:1",
+        "tensor[216, 17] i64 n=3672 (29Kb) x∈[0, 74] μ=48.484 σ=24.979 cuda:1",
+        "tensor[74, 10] i64 n=740 (5.8Kb) x∈[0, 31] μ=20.566 σ=10.225 cuda:1"
+    ],
+    "batch_size": 1
+}[0m
+[43m2222  {
+    "ref_points_c": "tensor[21, 3] n=63 x∈[-0.767, 0.702] μ=0.032 σ=0.450 cuda:1",
+    "src_points_c": "tensor[10, 3] n=30 x∈[-0.184, 0.204] μ=0.006 σ=0.116 cuda:1",
+    "ref_points_f": "tensor[159, 3] n=477 (1.9Kb) x∈[-0.775, 0.711] μ=-0.003 σ=0.451 cuda:1",
+    "src_points_f": "tensor[57, 3] n=171 x∈[-0.192, 0.206] μ=0.003 σ=0.113 cuda:1",
+    "ref_points": "tensor[6118, 3] n=18354 (72Kb) x∈[-0.790, 0.719] μ=9.768e-09 σ=0.449 cuda:1",
+    "src_points": "tensor[2741, 3] n=8223 (32Kb) x∈[-0.195, 0.211] μ=-6.819e-08 σ=0.111 cuda:1",
+    "gt_node_corr_indices": "tensor[0, 2] i64 n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:1",
+    "gt_node_corr_overlaps": "tensor[0] \u001b[38;2;127;127;127mempty\u001b[0m cuda:1",
+    "ref_feats_c": "tensor[21, 256] n=5376 (21Kb) x∈[-0.215, 0.191] μ=0.005 σ=0.062 grad DivBackward0 cuda:1",
+    "src_feats_c": "tensor[10, 256] n=2560 (10Kb) x∈[-0.216, 0.181] μ=0.005 σ=0.062 grad DivBackward0 cuda:1",
+    "ref_feats_f": "tensor[159, 256] n=40704 (0.2Mb) x∈[-2.384, 2.245] μ=0.008 σ=0.538 grad SliceBackward0 cuda:1",
+    "src_feats_f": "tensor[57, 256] n=14592 (57Kb) x∈[-1.830, 1.893] μ=0.000 σ=0.521 grad SliceBackward0 cuda:1",
+    "ref_node_corr_indices": "tensor[210] i64 1.6Kb x∈[0, 20] μ=10.000 σ=6.070 cuda:1",
+    "src_node_corr_indices": "tensor[210] i64 1.6Kb x∈[0, 9] μ=4.500 σ=2.879 cuda:1",
+    "ref_node_corr_knn_points": "tensor[0, 21, 3] n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:1",
+    "src_node_corr_knn_points": "tensor[0, 10, 3] n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:1",
+    "ref_node_corr_knn_masks": "tensor[0, 21] bool n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:1",
+    "src_node_corr_knn_masks": "tensor[0, 10] bool n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:1",
+    "matching_scores": "tensor[0, 22, 11] n=0 \u001b[38;2;127;127;127mempty\u001b[0m grad SubBackward0 cuda:1",
+    "ref_corr_points": "tensor[0, 3] n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:1",
+    "src_corr_points": "tensor[0, 3] n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:1",
+    "corr_scores": "tensor[0] \u001b[38;2;127;127;127mempty\u001b[0m cuda:1",
+    "estimated_transform": "tensor[4, 4] n=16 x∈[0., 1.000] μ=0.250 σ=0.447 cuda:1"
+}[0m
+[41m1111  {
+    "scene_name": "artifact/353686_sf/mode_11",
+    "dir_name": "/data/wlsgur4011/DataCollection/BreakingBad/data_split/artifact/353686_sf/mode_11",
+    "src_file_name": "piece_3.obj",
+    "ref_file_name": "piece_13.obj",
+    "src_frame": 9,
+    "ref_frame": 5,
+    "transform": "tensor[4, 4] n=16 x∈[-0.685, 3.329] μ=0.391 σ=0.978 cuda:1",
+    "features": "tensor[1567, 1] 6.1Kb x∈[1.000, 1.000] μ=1.000 σ=0. cuda:1",
+    "points": [
+        "tensor[1567, 3] n=4701 (18Kb) x∈[-0.393, 0.424] μ=-5.275e-08 σ=0.162 cuda:1",
+        "tensor[330, 3] n=990 (3.9Kb) x∈[-0.381, 0.423] μ=0.007 σ=0.172 cuda:1",
+        "tensor[108, 3] n=324 (1.3Kb) x∈[-0.371, 0.423] μ=0.006 σ=0.175 cuda:1",
+        "tensor[40, 3] n=120 x∈[-0.329, 0.423] μ=0.014 σ=0.175 cuda:1"
+    ],
+    "lengths": [
+        "tensor[2] i64 μ=783.500 σ=723.370 cuda:1 [272, 1295]",
+        "tensor[2] i64 μ=165.000 σ=173.948 cuda:1 [42, 288]",
+        "tensor[2] i64 μ=54.000 σ=52.326 cuda:1 [17, 91]",
+        "tensor[2] i64 μ=20.000 σ=15.556 cuda:1 [9, 31]"
+    ],
+    "neighbors": [
+        "tensor[1567, 47] i64 n=73649 (0.6Mb) x∈[0, 1567] μ=1.031e+03 σ=543.345 cuda:1",
+        "tensor[330, 27] i64 n=8910 (70Kb) x∈[0, 330] μ=200.690 σ=105.296 cuda:1",
+        "tensor[108, 30] i64 n=3240 (25Kb) x∈[0, 108] μ=72.983 σ=33.159 cuda:1",
+        "tensor[40, 29] i64 n=1160 (9.1Kb) x∈[0, 40] μ=29.302 σ=12.126 cuda:1"
+    ],
+    "subsampling": [
+        "tensor[330, 47] i64 n=15510 (0.1Mb) x∈[0, 1567] μ=1.092e+03 σ=518.184 cuda:1",
+        "tensor[108, 27] i64 n=2916 (23Kb) x∈[0, 330] μ=205.634 σ=108.804 cuda:1",
+        "tensor[40, 30] i64 n=1200 (9.4Kb) x∈[0, 108] μ=73.798 σ=34.971 cuda:1"
+    ],
+    "upsampling": [
+        "tensor[1567, 27] i64 n=42309 (0.3Mb) x∈[0, 330] μ=196.334 σ=108.795 cuda:1",
+        "tensor[330, 30] i64 n=9900 (77Kb) x∈[0, 108] μ=72.677 σ=32.563 cuda:1",
+        "tensor[108, 31] i64 n=3348 (26Kb) x∈[0, 40] μ=29.839 σ=11.548 cuda:1"
+    ],
+    "batch_size": 1
+}[0m
+[41m1111  {
+    "scene_name": "artifact/46459_sf/fractured_21",
+    "dir_name": "/data/wlsgur4011/DataCollection/BreakingBad/data_split/artifact/46459_sf/fractured_21",
+    "src_file_name": "piece_3.obj",
+    "ref_file_name": "piece_2.obj",
+    "src_frame": 3,
+    "ref_frame": 2,
+    "transform": "tensor[4, 4] n=16 x∈[-1.535, 1.000] μ=0.060 σ=0.681 cuda:0",
+    "features": "tensor[26691, 1] 0.1Mb x∈[1.000, 1.000] μ=1.000 σ=0. cuda:0",
+    "points": [
+        "tensor[26691, 3] n=80073 (0.3Mb) x∈[-2.070, 2.191] μ=-9.719e-09 σ=0.984 cuda:0",
+        "tensor[3101, 3] n=9303 (36Kb) x∈[-2.062, 2.189] μ=-0.002 σ=0.992 cuda:0",
+        "tensor[927, 3] n=2781 (11Kb) x∈[-2.041, 2.183] μ=-0.007 σ=0.996 cuda:0",
+        "tensor[295, 3] n=885 (3.5Kb) x∈[-2.034, 2.183] μ=0.005 σ=1.005 cuda:0"
+    ],
+    "lengths": [
+        "tensor[2] i64 μ=1.335e+04 σ=1.112e+04 cuda:0 [21209, 5482]",
+        "tensor[2] i64 μ=1.550e+03 σ=1.319e+03 cuda:0 [2483, 618]",
+        "tensor[2] i64 μ=463.500 σ=395.273 cuda:0 [743, 184]",
+        "tensor[2] i64 μ=147.500 σ=129.401 cuda:0 [239, 56]"
+    ],
+    "neighbors": [
+        "tensor[26691, 47] i64 n=1254477 (9.6Mb) x∈[0, 26691] μ=1.375e+04 σ=7.915e+03 cuda:0",
+        "tensor[3101, 27] i64 n=83727 (0.6Mb) x∈[0, 3101] μ=1.768e+03 σ=991.076 cuda:0",
+        "tensor[927, 30] i64 n=27810 (0.2Mb) x∈[0, 927] μ=583.659 σ=306.586 cuda:0",
+        "tensor[295, 32] i64 n=9440 (74Kb) x∈[0, 295] μ=208.338 σ=98.289 cuda:0"
+    ],
+    "subsampling": [
+        "tensor[3101, 47] i64 n=145747 (1.1Mb) x∈[0, 26691] μ=1.387e+04 σ=8.005e+03 cuda:0",
+        "tensor[927, 27] i64 n=25029 (0.2Mb) x∈[0, 3101] μ=1.832e+03 σ=1.008e+03 cuda:0",
+        "tensor[295, 30] i64 n=8850 (69Kb) x∈[0, 927] μ=598.362 σ=308.975 cuda:0"
+    ],
+    "upsampling": [
+        "tensor[26691, 27] i64 n=720657 (5.5Mb) x∈[0, 3101] μ=1.768e+03 σ=988.914 cuda:0",
+        "tensor[3101, 30] i64 n=93030 (0.7Mb) x∈[0, 927] μ=580.143 σ=305.853 cuda:0",
+        "tensor[927, 32] i64 n=29664 (0.2Mb) x∈[0, 295] μ=206.852 σ=98.290 cuda:0"
+    ],
+    "batch_size": 1
+}[0m
+[43m2222  {
+    "ref_points_c": "tensor[9, 3] n=27 x∈[-0.228, 0.211] μ=-0.005 σ=0.094 cuda:1",
+    "src_points_c": "tensor[31, 3] n=93 x∈[-0.329, 0.423] μ=0.020 σ=0.192 cuda:1",
+    "ref_points_f": "tensor[42, 3] n=126 x∈[-0.256, 0.211] μ=-0.005 σ=0.080 cuda:1",
+    "src_points_f": "tensor[288, 3] n=864 (3.4Kb) x∈[-0.381, 0.423] μ=0.009 σ=0.181 cuda:1",
+    "ref_points": "tensor[272, 3] n=816 (3.2Kb) x∈[-0.257, 0.218] μ=-3.959e-08 σ=0.072 cuda:1",
+    "src_points": "tensor[1295, 3] n=3885 (15Kb) x∈[-0.393, 0.424] μ=-5.505e-08 σ=0.175 cuda:1",
+    "gt_node_corr_indices": "tensor[0, 2] i64 n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:1",
+    "gt_node_corr_overlaps": "tensor[0] \u001b[38;2;127;127;127mempty\u001b[0m cuda:1",
+    "ref_feats_c": "tensor[9, 256] n=2304 (9Kb) x∈[-0.163, 0.214] μ=0.005 σ=0.062 grad DivBackward0 cuda:1",
+    "src_feats_c": "tensor[31, 256] n=7936 (31Kb) x∈[-0.193, 0.188] μ=0.005 σ=0.062 grad DivBackward0 cuda:1",
+    "ref_feats_f": "tensor[42, 256] n=10752 (42Kb) x∈[-3.289, 2.983] μ=0.028 σ=0.890 grad SliceBackward0 cuda:1",
+    "src_feats_f": "tensor[288, 256] n=73728 (0.3Mb) x∈[-2.515, 2.622] μ=0.005 σ=0.451 grad SliceBackward0 cuda:1",
+    "ref_node_corr_indices": "tensor[256] i64 2Kb x∈[0, 8] μ=3.906 σ=2.589 cuda:1",
+    "src_node_corr_indices": "tensor[256] i64 2Kb x∈[0, 30] μ=14.660 σ=8.917 cuda:1",
+    "ref_node_corr_knn_points": "tensor[0, 9, 3] n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:1",
+    "src_node_corr_knn_points": "tensor[0, 31, 3] n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:1",
+    "ref_node_corr_knn_masks": "tensor[0, 9] bool n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:1",
+    "src_node_corr_knn_masks": "tensor[0, 31] bool n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:1",
+    "matching_scores": "tensor[0, 10, 32] n=0 \u001b[38;2;127;127;127mempty\u001b[0m grad SubBackward0 cuda:1",
+    "ref_corr_points": "tensor[0, 3] n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:1",
+    "src_corr_points": "tensor[0, 3] n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:1",
+    "corr_scores": "tensor[0] \u001b[38;2;127;127;127mempty\u001b[0m cuda:1",
+    "estimated_transform": "tensor[4, 4] n=16 x∈[0., 1.000] μ=0.250 σ=0.447 cuda:1"
+}[0m
+[43m2222  {
+    "ref_points_c": "tensor[239, 3] n=717 (2.8Kb) x∈[-2.034, 2.183] μ=0.006 σ=1.079 cuda:0",
+    "src_points_c": "tensor[56, 3] n=168 x∈[-1.144, 1.116] μ=0.002 σ=0.595 cuda:0",
+    "ref_points_f": "tensor[2483, 3] n=7449 (29Kb) x∈[-2.062, 2.189] μ=-0.005 σ=1.069 cuda:0",
+    "src_points_f": "tensor[618, 3] n=1854 (7.2Kb) x∈[-1.170, 1.184] μ=0.007 σ=0.591 cuda:0",
+    "ref_points": "tensor[21209, 3] n=63627 (0.2Mb) x∈[-2.070, 2.191] μ=1.103e-08 σ=1.064 cuda:0",
+    "src_points": "tensor[5482, 3] n=16446 (64Kb) x∈[-1.173, 1.198] μ=-9.069e-08 σ=0.584 cuda:0",
+    "gt_node_corr_indices": "tensor[135, 2] i64 n=270 (2.1Kb) x∈[0, 236] μ=74.078 σ=66.407 cuda:0",
+    "gt_node_corr_overlaps": "tensor[135] x∈[0.056, 1.000] μ=0.464 σ=0.278 cuda:0",
+    "ref_feats_c": "tensor[239, 256] n=61184 (0.2Mb) x∈[-0.225, 0.219] μ=0.005 σ=0.062 grad DivBackward0 cuda:0",
+    "src_feats_c": "tensor[56, 256] n=14336 (56Kb) x∈[-0.207, 0.192] μ=0.005 σ=0.062 grad DivBackward0 cuda:0",
+    "ref_feats_f": "tensor[2483, 256] n=635648 (2.4Mb) x∈[-2.753, 2.895] μ=0.010 σ=0.521 grad SliceBackward0 cuda:0",
+    "src_feats_f": "tensor[618, 256] n=158208 (0.6Mb) x∈[-2.968, 2.724] μ=0.014 σ=0.584 grad SliceBackward0 cuda:0",
+    "ref_node_corr_indices": "tensor[256] i64 2Kb x∈[3, 237] μ=124.566 σ=69.518 cuda:0",
+    "src_node_corr_indices": "tensor[256] i64 2Kb x∈[1, 55] μ=27.660 σ=15.084 cuda:0",
+    "ref_node_corr_knn_points": "tensor[128, 64, 3] n=24576 (96Kb) x∈[-2.014, 0.785] μ=-0.120 σ=0.445 cuda:0",
+    "src_node_corr_knn_points": "tensor[128, 56, 3] n=21504 (84Kb) x∈[-1.170, 1.184] μ=0.035 σ=0.310 cuda:0",
+    "ref_node_corr_knn_masks": "tensor[128, 64] bool n=8192 (8Kb) x∈[False, True] μ=0.167 σ=0.373 cuda:0",
+    "src_node_corr_knn_masks": "tensor[128, 56] bool n=7168 (7Kb) x∈[False, True] μ=0.208 σ=0.406 cuda:0",
+    "matching_scores": "tensor[128, 65, 57] n=474240 (1.8Mb) x∈[-1.000e+12, 2.742] μ=-9.598e+11 σ=1.964e+11 grad SubBackward0 cuda:0",
+    "ref_corr_points": "tensor[1592, 3] n=4776 (19Kb) x∈[-2.014, 0.785] μ=-0.723 σ=0.850 cuda:0",
+    "src_corr_points": "tensor[1592, 3] n=4776 (19Kb) x∈[-1.170, 1.184] μ=0.170 σ=0.657 cuda:0",
+    "corr_scores": "tensor[1592] 6.2Kb x∈[0.050, 0.203] μ=0.084 σ=0.026 cuda:0",
+    "estimated_transform": "tensor[4, 4] n=16 x∈[-1.538, 1.000] μ=0.062 σ=0.681 cuda:0"
+}[0m
+[41m1111  {
+    "scene_name": "artifact/1344057_sf/mode_14",
+    "dir_name": "/data/wlsgur4011/DataCollection/BreakingBad/data_split/artifact/1344057_sf/mode_14",
+    "src_file_name": "piece_3.obj",
+    "ref_file_name": "piece_12.obj",
+    "src_frame": 9,
+    "ref_frame": 4,
+    "transform": "tensor[4, 4] n=16 x∈[-0.810, 3.853] μ=0.250 σ=1.098 cuda:0",
+    "features": "tensor[9597, 1] 37Kb x∈[1.000, 1.000] μ=1.000 σ=0. cuda:0",
+    "points": [
+        "tensor[9597, 3] n=28791 (0.1Mb) x∈[-0.859, 0.854] μ=3.909e-09 σ=0.299 cuda:0",
+        "tensor[829, 3] n=2487 (9.7Kb) x∈[-0.858, 0.854] μ=-0.001 σ=0.312 cuda:0",
+        "tensor[238, 3] n=714 (2.8Kb) x∈[-0.857, 0.832] μ=0.002 σ=0.313 cuda:0",
+        "tensor[72, 3] n=216 x∈[-0.855, 0.823] μ=-0.017 σ=0.318 cuda:0"
+    ],
+    "lengths": [
+        "tensor[2] i64 μ=4.798e+03 σ=5.587e+03 cuda:0 [848, 8749]",
+        "tensor[2] i64 μ=414.500 σ=505.581 cuda:0 [57, 772]",
+        "tensor[2] i64 μ=119.000 σ=140.007 cuda:0 [20, 218]",
+        "tensor[2] i64 μ=36.000 σ=35.355 cuda:0 [11, 61]"
+    ],
+    "neighbors": [
+        "tensor[9597, 47] i64 n=451059 (3.4Mb) x∈[0, 9597] μ=4.811e+03 σ=2.779e+03 cuda:0",
+        "tensor[829, 27] i64 n=22383 (0.2Mb) x∈[0, 829] μ=448.030 σ=255.299 cuda:0",
+        "tensor[238, 30] i64 n=7140 (56Kb) x∈[0, 238] μ=145.929 σ=74.745 cuda:0",
+        "tensor[72, 31] i64 n=2232 (17Kb) x∈[0, 72] μ=50.641 σ=22.636 cuda:0"
+    ],
+    "subsampling": [
+        "tensor[829, 47] i64 n=38963 (0.3Mb) x∈[0, 9597] μ=4.921e+03 σ=2.739e+03 cuda:0",
+        "tensor[238, 27] i64 n=6426 (50Kb) x∈[0, 829] μ=458.387 σ=262.358 cuda:0",
+        "tensor[72, 30] i64 n=2160 (17Kb) x∈[0, 238] μ=148.890 σ=79.052 cuda:0"
+    ],
+    "upsampling": [
+        "tensor[9597, 27] i64 n=259119 (2.0Mb) x∈[0, 829] μ=440.379 σ=257.813 cuda:0",
+        "tensor[829, 30] i64 n=24870 (0.2Mb) x∈[0, 238] μ=145.140 σ=73.607 cuda:0",
+        "tensor[238, 32] i64 n=7616 (60Kb) x∈[0, 72] μ=50.847 σ=21.572 cuda:0"
+    ],
+    "batch_size": 1
+}[0m
+[41m1111  {
+    "scene_name": "artifact/1436276_sf/fractured_12",
+    "dir_name": "/data/wlsgur4011/DataCollection/BreakingBad/data_split/artifact/1436276_sf/fractured_12",
+    "src_file_name": "piece_3.obj",
+    "ref_file_name": "piece_1.obj",
+    "src_frame": 3,
+    "ref_frame": 1,
+    "transform": "tensor[4, 4] n=16 x∈[-2.308, 1.000] μ=-0.102 σ=0.874 cuda:1",
+    "features": "tensor[27697, 1] 0.1Mb x∈[1.000, 1.000] μ=1.000 σ=0. cuda:1",
+    "points": [
+        "tensor[27697, 3] n=83091 (0.3Mb) x∈[-2.898, 0.885] μ=4.169e-08 σ=0.795 cuda:1",
+        "tensor[745, 3] n=2235 (8.7Kb) x∈[-2.890, 0.868] μ=-0.063 σ=0.843 cuda:1",
+        "tensor[238, 3] n=714 (2.8Kb) x∈[-2.889, 0.844] μ=-0.102 σ=0.865 cuda:1",
+        "tensor[75, 3] n=225 x∈[-2.889, 0.841] μ=-0.193 σ=0.961 cuda:1"
+    ],
+    "lengths": [
+        "tensor[2] i64 μ=1.385e+04 σ=1.237e+04 cuda:1 [22598, 5099]",
+        "tensor[2] i64 μ=372.500 σ=300.520 cuda:1 [585, 160]",
+        "tensor[2] i64 μ=119.000 σ=84.853 cuda:1 [179, 59]",
+        "tensor[2] i64 μ=37.500 σ=30.406 cuda:1 [59, 16]"
+    ],
+    "neighbors": [
+        "tensor[27697, 47] i64 n=1301759 (9.9Mb) x∈[0, 27696] μ=1.385e+04 σ=7.993e+03 cuda:1",
+        "tensor[745, 27] i64 n=20115 (0.2Mb) x∈[0, 745] μ=427.130 σ=242.172 cuda:1",
+        "tensor[238, 30] i64 n=7140 (56Kb) x∈[0, 238] μ=160.535 σ=80.056 cuda:1",
+        "tensor[75, 32] i64 n=2400 (19Kb) x∈[0, 75] μ=58.024 σ=23.623 cuda:1"
+    ],
+    "subsampling": [
+        "tensor[745, 47] i64 n=35015 (0.3Mb) x∈[1, 27696] μ=1.426e+04 σ=8.135e+03 cuda:1",
+        "tensor[238, 27] i64 n=6426 (50Kb) x∈[0, 745] μ=457.050 σ=246.674 cuda:1",
+        "tensor[75, 30] i64 n=2250 (18Kb) x∈[0, 238] μ=164.298 σ=80.521 cuda:1"
+    ],
+    "upsampling": [
+        "tensor[27697, 27] i64 n=747819 (5.7Mb) x∈[0, 745] μ=413.563 σ=239.197 cuda:1",
+        "tensor[745, 30] i64 n=22350 (0.2Mb) x∈[0, 238] μ=154.663 σ=80.888 cuda:1",
+        "tensor[238, 32] i64 n=7616 (60Kb) x∈[0, 75] μ=57.788 σ=23.481 cuda:1"
+    ],
+    "batch_size": 1
+}[0m
+[43m2222  {
+    "ref_points_c": "tensor[11, 3] n=33 x∈[-0.215, 0.203] μ=-0.001 σ=0.086 cuda:0",
+    "src_points_c": "tensor[61, 3] n=183 x∈[-0.855, 0.823] μ=-0.020 σ=0.344 cuda:0",
+    "ref_points_f": "tensor[57, 3] n=171 x∈[-0.215, 0.205] μ=0.002 σ=0.081 cuda:0",
+    "src_points_f": "tensor[772, 3] n=2316 (9.0Kb) x∈[-0.858, 0.854] μ=-0.001 σ=0.322 cuda:0",
+    "ref_points": "tensor[848, 3] n=2544 (9.9Kb) x∈[-0.226, 0.207] μ=2.812e-10 σ=0.077 cuda:0",
+    "src_points": "tensor[8749, 3] n=26247 (0.1Mb) x∈[-0.859, 0.854] μ=4.360e-09 σ=0.312 cuda:0",
+    "gt_node_corr_indices": "tensor[0, 2] i64 n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:0",
+    "gt_node_corr_overlaps": "tensor[0] \u001b[38;2;127;127;127mempty\u001b[0m cuda:0",
+    "ref_feats_c": "tensor[11, 256] n=2816 (11Kb) x∈[-0.173, 0.184] μ=-0.005 σ=0.062 grad DivBackward0 cuda:0",
+    "src_feats_c": "tensor[61, 256] n=15616 (61Kb) x∈[-0.186, 0.203] μ=-0.002 σ=0.062 grad DivBackward0 cuda:0",
+    "ref_feats_f": "tensor[57, 256] n=14592 (57Kb) x∈[-3.019, 3.203] μ=0.012 σ=0.808 grad SliceBackward0 cuda:0",
+    "src_feats_f": "tensor[772, 256] n=197632 (0.8Mb) x∈[-2.252, 2.127] μ=0.008 σ=0.399 grad SliceBackward0 cuda:0",
+    "ref_node_corr_indices": "tensor[256] i64 2Kb x∈[0, 10] μ=4.656 σ=3.384 cuda:0",
+    "src_node_corr_indices": "tensor[256] i64 2Kb x∈[0, 60] μ=31.734 σ=18.059 cuda:0",
+    "ref_node_corr_knn_points": "tensor[0, 11, 3] n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:0",
+    "src_node_corr_knn_points": "tensor[0, 61, 3] n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:0",
+    "ref_node_corr_knn_masks": "tensor[0, 11] bool n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:0",
+    "src_node_corr_knn_masks": "tensor[0, 61] bool n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:0",
+    "matching_scores": "tensor[0, 12, 62] n=0 \u001b[38;2;127;127;127mempty\u001b[0m grad SubBackward0 cuda:0",
+    "ref_corr_points": "tensor[0, 3] n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:0",
+    "src_corr_points": "tensor[0, 3] n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:0",
+    "corr_scores": "tensor[0] \u001b[38;2;127;127;127mempty\u001b[0m cuda:0",
+    "estimated_transform": "tensor[4, 4] n=16 x∈[0., 1.000] μ=0.250 σ=0.447 cuda:0"
+}[0m
+[43m2222  {
+    "ref_points_c": "tensor[59, 3] n=177 x∈[-2.889, 0.841] μ=-0.243 σ=1.055 cuda:1",
+    "src_points_c": "tensor[16, 3] n=48 x∈[-0.720, 0.804] μ=-0.008 σ=0.431 cuda:1",
+    "ref_points_f": "tensor[585, 3] n=1755 (6.9Kb) x∈[-2.890, 0.868] μ=-0.081 σ=0.924 cuda:1",
+    "src_points_f": "tensor[160, 3] n=480 (1.9Kb) x∈[-0.725, 0.807] μ=0.003 σ=0.423 cuda:1",
+    "ref_points": "tensor[22598, 3] n=67794 (0.3Mb) x∈[-2.898, 0.885] μ=3.027e-08 σ=0.857 cuda:1",
+    "src_points": "tensor[5099, 3] n=15297 (60Kb) x∈[-0.726, 0.814] μ=9.127e-08 σ=0.419 cuda:1",
+    "gt_node_corr_indices": "tensor[26, 2] i64 n=52 x∈[1, 57] μ=20.154 σ=16.093 cuda:1",
+    "gt_node_corr_overlaps": "tensor[26] x∈[0.087, 1.000] μ=0.514 σ=0.307 cuda:1",
+    "ref_feats_c": "tensor[59, 256] n=15104 (59Kb) x∈[-0.177, 0.185] μ=-0.001 σ=0.062 grad DivBackward0 cuda:1",
+    "src_feats_c": "tensor[16, 256] n=4096 (16Kb) x∈[-0.196, 0.209] μ=-0.003 σ=0.062 grad DivBackward0 cuda:1",
+    "ref_feats_f": "tensor[585, 256] n=149760 (0.6Mb) x∈[-3.135, 2.507] μ=0.006 σ=0.424 grad SliceBackward0 cuda:1",
+    "src_feats_f": "tensor[160, 256] n=40960 (0.2Mb) x∈[-2.457, 2.761] μ=-0.001 σ=0.509 grad SliceBackward0 cuda:1",
+    "ref_node_corr_indices": "tensor[256] i64 2Kb x∈[0, 58] μ=29.367 σ=15.556 cuda:1",
+    "src_node_corr_indices": "tensor[256] i64 2Kb x∈[0, 15] μ=7.699 σ=5.063 cuda:1",
+    "ref_node_corr_knn_points": "tensor[25, 59, 3] n=4425 (17Kb) x∈[-1.969, 0.060] μ=-0.154 σ=0.440 cuda:1",
+    "src_node_corr_knn_points": "tensor[25, 16, 3] n=1200 (4.7Kb) x∈[-0.311, 0.807] μ=0.161 σ=0.307 cuda:1",
+    "ref_node_corr_knn_masks": "tensor[25, 59] bool n=1475 (1.4Kb) x∈[False, True] μ=0.149 σ=0.356 cuda:1",
+    "src_node_corr_knn_masks": "tensor[25, 16] bool n=400 x∈[False, True] μ=0.672 σ=0.470 cuda:1",
+    "matching_scores": "tensor[25, 60, 17] n=25500 (100Kb) x∈[-1.000e+12, 2.138] μ=-8.859e+11 σ=3.179e+11 grad SubBackward0 cuda:1",
+    "ref_corr_points": "tensor[360, 3] n=1080 (4.2Kb) x∈[-1.969, 0.060] μ=-1.032 σ=0.625 cuda:1",
+    "src_corr_points": "tensor[360, 3] n=1080 (4.2Kb) x∈[-0.311, 0.807] μ=0.240 σ=0.352 cuda:1",
+    "corr_scores": "tensor[360] 1.4Kb x∈[0.051, 0.283] μ=0.080 σ=0.030 cuda:1",
+    "estimated_transform": "tensor[4, 4] n=16 x∈[-1.673, 1.000] μ=-0.036 σ=0.684 cuda:1"
+}[0m
+[41m1111  {
+    "scene_name": "artifact/1344039_sf/fractured_67",
+    "dir_name": "/data/wlsgur4011/DataCollection/BreakingBad/data_split/artifact/1344039_sf/fractured_67",
+    "src_file_name": "piece_18.obj",
+    "ref_file_name": "piece_12.obj",
+    "src_frame": 10,
+    "ref_frame": 4,
+    "transform": "tensor[4, 4] n=16 x∈[-2.261, 1.000] μ=-0.134 σ=0.888 cuda:0",
+    "features": "tensor[3021, 1] 12Kb x∈[1.000, 1.000] μ=1.000 σ=0. cuda:0",
+    "points": [
+        "tensor[3021, 3] n=9063 (35Kb) x∈[-0.315, 0.387] μ=-1.463e-08 σ=0.139 cuda:0",
+        "tensor[380, 3] n=1140 (4.5Kb) x∈[-0.309, 0.368] μ=0.000 σ=0.144 cuda:0",
+        "tensor[123, 3] n=369 (1.4Kb) x∈[-0.307, 0.343] μ=0.001 σ=0.149 cuda:0",
+        "tensor[44, 3] n=132 x∈[-0.271, 0.304] μ=0.004 σ=0.148 cuda:0"
+    ],
+    "lengths": [
+        "tensor[2] i64 μ=1.510e+03 σ=1.843e+03 cuda:0 [2814, 207]",
+        "tensor[2] i64 μ=190.000 σ=236.174 cuda:0 [357, 23]",
+        "tensor[2] i64 μ=61.500 σ=74.246 cuda:0 [114, 9]",
+        "tensor[2] i64 μ=22.000 σ=21.213 cuda:0 [37, 7]"
+    ],
+    "neighbors": [
+        "tensor[3021, 47] i64 n=141987 (1.1Mb) x∈[0, 3021] μ=1.599e+03 σ=914.680 cuda:0",
+        "tensor[380, 27] i64 n=10260 (80Kb) x∈[0, 380] μ=227.995 σ=122.237 cuda:0",
+        "tensor[123, 30] i64 n=3690 (29Kb) x∈[0, 123] μ=72.248 σ=38.704 cuda:0",
+        "tensor[44, 32] i64 n=1408 (11Kb) x∈[0, 44] μ=24.771 σ=14.460 cuda:0"
+    ],
+    "subsampling": [
+        "tensor[380, 47] i64 n=17860 (0.1Mb) x∈[0, 3021] μ=1.623e+03 σ=927.033 cuda:0",
+        "tensor[123, 27] i64 n=3321 (26Kb) x∈[0, 380] μ=240.206 σ=124.917 cuda:0",
+        "tensor[44, 30] i64 n=1320 (10Kb) x∈[0, 123] μ=78.483 σ=40.070 cuda:0"
+    ],
+    "upsampling": [
+        "tensor[3021, 27] i64 n=81567 (0.6Mb) x∈[0, 380] μ=228.621 σ=122.364 cuda:0",
+        "tensor[380, 30] i64 n=11400 (89Kb) x∈[0, 123] μ=71.620 σ=38.336 cuda:0",
+        "tensor[123, 32] i64 n=3936 (31Kb) x∈[0, 44] μ=22.316 σ=13.627 cuda:0"
+    ],
+    "batch_size": 1
+}[0m
+[41m1111  {
+    "scene_name": "artifact/1344047_sf/fractured_4",
+    "dir_name": "/data/wlsgur4011/DataCollection/BreakingBad/data_split/artifact/1344047_sf/fractured_4",
+    "src_file_name": "piece_9.obj",
+    "ref_file_name": "piece_10.obj",
+    "src_frame": 13,
+    "ref_frame": 2,
+    "transform": "tensor[4, 4] n=16 x∈[-4.171, 1.582] μ=-0.160 σ=1.310 cuda:1",
+    "features": "tensor[666, 1] 2.6Kb x∈[1.000, 1.000] μ=1.000 σ=0. cuda:1",
+    "points": [
+        "tensor[666, 3] n=1998 (7.8Kb) x∈[-0.338, 0.238] μ=-7.876e-09 σ=0.113 cuda:1",
+        "tensor[193, 3] n=579 (2.3Kb) x∈[-0.338, 0.233] μ=0.002 σ=0.116 cuda:1",
+        "tensor[68, 3] n=204 x∈[-0.338, 0.226] μ=-0.001 σ=0.124 cuda:1",
+        "tensor[25, 3] n=75 x∈[-0.322, 0.223] μ=-0.002 σ=0.123 cuda:1"
+    ],
+    "lengths": [
+        "tensor[2] i64 μ=333.000 σ=255.973 cuda:1 [514, 152]",
+        "tensor[2] i64 μ=96.500 σ=71.418 cuda:1 [147, 46]",
+        "tensor[2] i64 μ=34.000 σ=22.627 cuda:1 [50, 18]",
+        "tensor[2] i64 μ=12.500 σ=7.778 cuda:1 [18, 7]"
+    ],
+    "neighbors": [
+        "tensor[666, 36] i64 n=23976 (0.2Mb) x∈[0, 666] μ=454.559 σ=223.568 cuda:1",
+        "tensor[193, 27] i64 n=5211 (41Kb) x∈[0, 193] μ=114.692 σ=64.240 cuda:1",
+        "tensor[68, 30] i64 n=2040 (16Kb) x∈[0, 68] μ=45.146 σ=23.031 cuda:1",
+        "tensor[25, 18] i64 n=450 (3.5Kb) x∈[0, 25] μ=13.949 σ=8.692 cuda:1"
+    ],
+    "subsampling": [
+        "tensor[193, 35] i64 n=6755 (53Kb) x∈[0, 666] μ=462.616 σ=222.761 cuda:1",
+        "tensor[68, 27] i64 n=1836 (14Kb) x∈[0, 193] μ=124.450 σ=64.368 cuda:1",
+        "tensor[25, 30] i64 n=750 (5.9Kb) x∈[0, 68] μ=46.325 σ=22.793 cuda:1"
+    ],
+    "upsampling": [
+        "tensor[666, 27] i64 n=17982 (0.1Mb) x∈[0, 193] μ=113.600 σ=63.858 cuda:1",
+        "tensor[193, 30] i64 n=5790 (45Kb) x∈[0, 68] μ=43.400 σ=23.100 cuda:1",
+        "tensor[68, 18] i64 n=1224 (9.6Kb) x∈[0, 25] μ=13.666 σ=8.663 cuda:1"
+    ],
+    "batch_size": 1
+}[0m
+[43m2222  {
+    "ref_points_c": "tensor[37, 3] n=111 x∈[-0.271, 0.304] μ=0.004 σ=0.161 cuda:0",
+    "src_points_c": "tensor[7, 3] n=21 x∈[-0.084, 0.082] μ=0.002 σ=0.039 cuda:0",
+    "ref_points_f": "tensor[357, 3] n=1071 (4.2Kb) x∈[-0.309, 0.368] μ=-0.000 σ=0.149 cuda:0",
+    "src_points_f": "tensor[23, 3] n=69 x∈[-0.115, 0.110] μ=0.005 σ=0.042 cuda:0",
+    "ref_points": "tensor[2814, 3] n=8442 (33Kb) x∈[-0.315, 0.387] μ=-1.443e-08 σ=0.144 cuda:0",
+    "src_points": "tensor[207, 3] n=621 (2.4Kb) x∈[-0.135, 0.119] μ=-1.579e-08 σ=0.042 cuda:0",
+    "gt_node_corr_indices": "tensor[0, 2] i64 n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:0",
+    "gt_node_corr_overlaps": "tensor[0] \u001b[38;2;127;127;127mempty\u001b[0m cuda:0",
+    "ref_feats_c": "tensor[37, 256] n=9472 (37Kb) x∈[-0.174, 0.166] μ=0.000 σ=0.063 grad DivBackward0 cuda:0",
+    "src_feats_c": "tensor[7, 256] n=1792 (7Kb) x∈[-0.184, 0.154] μ=-0.011 σ=0.061 grad DivBackward0 cuda:0",
+    "ref_feats_f": "tensor[357, 256] n=91392 (0.3Mb) x∈[-1.740, 1.792] μ=0.009 σ=0.313 grad SliceBackward0 cuda:0",
+    "src_feats_f": "tensor[23, 256] n=5888 (23Kb) x∈[-3.769, 3.581] μ=0.034 σ=1.052 grad SliceBackward0 cuda:0",
+    "ref_node_corr_indices": "tensor[256] i64 2Kb x∈[0, 36] μ=18.047 σ=10.650 cuda:0",
+    "src_node_corr_indices": "tensor[256] i64 2Kb x∈[0, 6] μ=2.965 σ=1.989 cuda:0",
+    "ref_node_corr_knn_points": "tensor[0, 37, 3] n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:0",
+    "src_node_corr_knn_points": "tensor[0, 7, 3] n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:0",
+    "ref_node_corr_knn_masks": "tensor[0, 37] bool n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:0",
+    "src_node_corr_knn_masks": "tensor[0, 7] bool n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:0",
+    "matching_scores": "tensor[0, 38, 8] n=0 \u001b[38;2;127;127;127mempty\u001b[0m grad SubBackward0 cuda:0",
+    "ref_corr_points": "tensor[0, 3] n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:0",
+    "src_corr_points": "tensor[0, 3] n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:0",
+    "corr_scores": "tensor[0] \u001b[38;2;127;127;127mempty\u001b[0m cuda:0",
+    "estimated_transform": "tensor[4, 4] n=16 x∈[0., 1.000] μ=0.250 σ=0.447 cuda:0"
+}[0m
+[43m2222  {
+    "ref_points_c": "tensor[18, 3] n=54 x∈[-0.322, 0.223] μ=-0.004 σ=0.141 cuda:1",
+    "src_points_c": "tensor[7, 3] n=21 x∈[-0.094, 0.099] μ=0.003 σ=0.061 cuda:1",
+    "ref_points_f": "tensor[147, 3] n=441 (1.7Kb) x∈[-0.338, 0.233] μ=-0.000 σ=0.126 cuda:1",
+    "src_points_f": "tensor[46, 3] n=138 x∈[-0.162, 0.164] μ=0.009 σ=0.071 cuda:1",
+    "ref_points": "tensor[514, 3] n=1542 (6.0Kb) x∈[-0.338, 0.238] μ=-8.504e-10 σ=0.123 cuda:1",
+    "src_points": "tensor[152, 3] n=456 (1.8Kb) x∈[-0.173, 0.168] μ=-3.216e-08 σ=0.070 cuda:1",
+    "gt_node_corr_indices": "tensor[0, 2] i64 n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:1",
+    "gt_node_corr_overlaps": "tensor[0] \u001b[38;2;127;127;127mempty\u001b[0m cuda:1",
+    "ref_feats_c": "tensor[18, 256] n=4608 (18Kb) x∈[-0.226, 0.186] μ=-0.004 σ=0.062 grad DivBackward0 cuda:1",
+    "src_feats_c": "tensor[7, 256] n=1792 (7Kb) x∈[-0.195, 0.162] μ=-0.010 σ=0.062 grad DivBackward0 cuda:1",
+    "ref_feats_f": "tensor[147, 256] n=37632 (0.1Mb) x∈[-2.172, 2.258] μ=0.013 σ=0.323 grad SliceBackward0 cuda:1",
+    "src_feats_f": "tensor[46, 256] n=11776 (46Kb) x∈[-2.353, 2.373] μ=0.004 σ=0.564 grad SliceBackward0 cuda:1",
+    "ref_node_corr_indices": "tensor[126] i64 x∈[0, 17] μ=8.500 σ=5.209 cuda:1",
+    "src_node_corr_indices": "tensor[126] i64 x∈[0, 6] μ=3.000 σ=2.008 cuda:1",
+    "ref_node_corr_knn_points": "tensor[0, 18, 3] n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:1",
+    "src_node_corr_knn_points": "tensor[0, 7, 3] n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:1",
+    "ref_node_corr_knn_masks": "tensor[0, 18] bool n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:1",
+    "src_node_corr_knn_masks": "tensor[0, 7] bool n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:1",
+    "matching_scores": "tensor[0, 19, 8] n=0 \u001b[38;2;127;127;127mempty\u001b[0m grad SubBackward0 cuda:1",
+    "ref_corr_points": "tensor[0, 3] n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:1",
+    "src_corr_points": "tensor[0, 3] n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:1",
+    "corr_scores": "tensor[0] \u001b[38;2;127;127;127mempty\u001b[0m cuda:1",
+    "estimated_transform": "tensor[4, 4] n=16 x∈[0., 1.000] μ=0.250 σ=0.447 cuda:1"
+}[0m
+[41m1111  {
+    "scene_name": "artifact/250142_sf/fractured_9",
+    "dir_name": "/data/wlsgur4011/DataCollection/BreakingBad/data_split/artifact/250142_sf/fractured_9",
+    "src_file_name": "piece_12.obj",
+    "ref_file_name": "piece_0.obj",
+    "src_frame": 4,
+    "ref_frame": 0,
+    "transform": "tensor[4, 4] n=16 x∈[-0.996, 2.401] μ=0.223 σ=0.989 cuda:1",
+    "features": "tensor[4316, 1] 17Kb x∈[1.000, 1.000] μ=1.000 σ=0. cuda:1",
+    "points": [
+        "tensor[4316, 3] n=12948 (51Kb) x∈[-0.319, 0.341] μ=3.694e-08 σ=0.113 cuda:1",
+        "tensor[300, 3] n=900 (3.5Kb) x∈[-0.312, 0.339] μ=-0.001 σ=0.114 cuda:1",
+        "tensor[94, 3] n=282 (1.1Kb) x∈[-0.312, 0.339] μ=-0.001 σ=0.124 cuda:1",
+        "tensor[28, 3] n=84 x∈[-0.283, 0.300] μ=-0.027 σ=0.132 cuda:1"
+    ],
+    "lengths": [
+        "tensor[2] i64 μ=2.158e+03 σ=1.649e+03 cuda:1 [992, 3324]",
+        "tensor[2] i64 μ=150.000 σ=93.338 cuda:1 [84, 216]",
+        "tensor[2] i64 μ=47.000 σ=14.142 cuda:1 [37, 57]",
+        "tensor[2] i64 μ=14.000 σ=0. cuda:1 [14, 14]"
+    ],
+    "neighbors": [
+        "tensor[4316, 47] i64 n=202852 (1.5Mb) x∈[0, 4316] μ=2.164e+03 σ=1.248e+03 cuda:1",
+        "tensor[300, 27] i64 n=8100 (63Kb) x∈[0, 300] μ=174.800 σ=90.586 cuda:1",
+        "tensor[94, 30] i64 n=2820 (22Kb) x∈[0, 94] μ=61.654 σ=28.908 cuda:1",
+        "tensor[28, 14] i64 n=392 (3.1Kb) x∈[0, 28] μ=14.959 σ=8.638 cuda:1"
+    ],
+    "subsampling": [
+        "tensor[300, 47] i64 n=14100 (0.1Mb) x∈[0, 4316] μ=2.050e+03 σ=1.276e+03 cuda:1",
+        "tensor[94, 27] i64 n=2538 (20Kb) x∈[0, 300] μ=170.061 σ=99.020 cuda:1",
+        "tensor[28, 30] i64 n=840 (6.6Kb) x∈[0, 94] μ=60.546 σ=31.545 cuda:1"
+    ],
+    "upsampling": [
+        "tensor[4316, 27] i64 n=116532 (0.9Mb) x∈[0, 300] μ=178.202 σ=86.890 cuda:1",
+        "tensor[300, 30] i64 n=9000 (70Kb) x∈[0, 94] μ=63.051 σ=26.213 cuda:1",
+        "tensor[94, 14] i64 n=1316 (10Kb) x∈[0, 28] μ=16.539 σ=8.194 cuda:1"
+    ],
+    "batch_size": 1
+}[0m
+[41m1111  {
+    "scene_name": "artifact/1344052_sf/mode_13",
+    "dir_name": "/data/wlsgur4011/DataCollection/BreakingBad/data_split/artifact/1344052_sf/mode_13",
+    "src_file_name": "piece_5.obj",
+    "ref_file_name": "piece_4.obj",
+    "src_frame": 5,
+    "ref_frame": 4,
+    "transform": "tensor[4, 4] n=16 x∈[-0.745, 2.139] μ=0.414 σ=0.705 cuda:0",
+    "features": "tensor[16113, 1] 63Kb x∈[1.000, 1.000] μ=1.000 σ=0. cuda:0",
+    "points": [
+        "tensor[16113, 3] n=48339 (0.2Mb) x∈[-3.043, 3.387] μ=1.649e-08 σ=1.119 cuda:0",
+        "tensor[11556, 3] n=34668 (0.1Mb) x∈[-3.043, 3.384] μ=0.002 σ=1.117 cuda:0",
+        "tensor[5718, 3] n=17154 (67Kb) x∈[-3.043, 3.362] μ=0.006 σ=1.122 cuda:0",
+        "tensor[1785, 3] n=5355 (21Kb) x∈[-3.036, 3.320] μ=0.004 σ=1.140 cuda:0"
+    ],
+    "lengths": [
+        "tensor[2] i64 μ=8.056e+03 σ=6.864e+03 cuda:0 [12910, 3203]",
+        "tensor[2] i64 μ=5.778e+03 σ=4.886e+03 cuda:0 [9233, 2323]",
+        "tensor[2] i64 μ=2.859e+03 σ=2.404e+03 cuda:0 [4559, 1159]",
+        "tensor[2] i64 μ=892.500 σ=755.897 cuda:0 [1427, 358]"
+    ],
+    "neighbors": [
+        "tensor[16113, 16] i64 n=257808 (2.0Mb) x∈[0, 16113] μ=1.370e+04 σ=4.483e+03 cuda:0",
+        "tensor[11556, 27] i64 n=312012 (2.4Mb) x∈[0, 11556] μ=9.123e+03 σ=3.584e+03 cuda:0",
+        "tensor[5718, 30] i64 n=171540 (1.3Mb) x∈[0, 5718] μ=3.646e+03 σ=1.899e+03 cuda:0",
+        "tensor[1785, 32] i64 n=57120 (0.4Mb) x∈[0, 1785] μ=1.038e+03 σ=578.148 cuda:0"
+    ],
+    "subsampling": [
+        "tensor[11556, 15] i64 n=173340 (1.3Mb) x∈[0, 16113] μ=1.372e+04 σ=4.466e+03 cuda:0",
+        "tensor[5718, 27] i64 n=154386 (1.2Mb) x∈[0, 11556] μ=9.217e+03 σ=3.540e+03 cuda:0",
+        "tensor[1785, 30] i64 n=53550 (0.4Mb) x∈[0, 5718] μ=3.711e+03 σ=1.907e+03 cuda:0"
+    ],
+    "upsampling": [
+        "tensor[16113, 27] i64 n=435051 (3.3Mb) x∈[0, 11556] μ=9.125e+03 σ=3.579e+03 cuda:0",
+        "tensor[11556, 30] i64 n=346680 (2.6Mb) x∈[0, 5718] μ=3.668e+03 σ=1.899e+03 cuda:0",
+        "tensor[5718, 32] i64 n=182976 (1.4Mb) x∈[0, 1785] μ=1.051e+03 σ=580.882 cuda:0"
+    ],
+    "batch_size": 1
+}[0m
+[43m2222  {
+    "ref_points_c": "tensor[14, 3] n=42 x∈[-0.283, 0.300] μ=-0.047 σ=0.138 cuda:1",
+    "src_points_c": "tensor[14, 3] n=42 x∈[-0.226, 0.206] μ=-0.007 σ=0.124 cuda:1",
+    "ref_points_f": "tensor[84, 3] n=252 x∈[-0.312, 0.339] μ=-0.004 σ=0.133 cuda:1",
+    "src_points_f": "tensor[216, 3] n=648 (2.5Kb) x∈[-0.252, 0.208] μ=0.001 σ=0.106 cuda:1",
+    "ref_points": "tensor[992, 3] n=2976 (12Kb) x∈[-0.319, 0.341] μ=7.234e-08 σ=0.128 cuda:1",
+    "src_points": "tensor[3324, 3] n=9972 (39Kb) x∈[-0.252, 0.215] μ=2.625e-08 σ=0.108 cuda:1",
+    "gt_node_corr_indices": "tensor[0, 2] i64 n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:1",
+    "gt_node_corr_overlaps": "tensor[0] \u001b[38;2;127;127;127mempty\u001b[0m cuda:1",
+    "ref_feats_c": "tensor[14, 256] n=3584 (14Kb) x∈[-0.189, 0.180] μ=-0.008 σ=0.062 grad DivBackward0 cuda:1",
+    "src_feats_c": "tensor[14, 256] n=3584 (14Kb) x∈[-0.213, 0.187] μ=-0.007 σ=0.062 grad DivBackward0 cuda:1",
+    "ref_feats_f": "tensor[84, 256] n=21504 (84Kb) x∈[-2.150, 1.799] μ=0.016 σ=0.417 grad SliceBackward0 cuda:1",
+    "src_feats_f": "tensor[216, 256] n=55296 (0.2Mb) x∈[-1.621, 1.587] μ=0.013 σ=0.361 grad SliceBackward0 cuda:1",
+    "ref_node_corr_indices": "tensor[196] i64 1.5Kb x∈[0, 13] μ=6.500 σ=4.041 cuda:1",
+    "src_node_corr_indices": "tensor[196] i64 1.5Kb x∈[0, 13] μ=6.500 σ=4.041 cuda:1",
+    "ref_node_corr_knn_points": "tensor[0, 14, 3] n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:1",
+    "src_node_corr_knn_points": "tensor[0, 14, 3] n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:1",
+    "ref_node_corr_knn_masks": "tensor[0, 14] bool n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:1",
+    "src_node_corr_knn_masks": "tensor[0, 14] bool n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:1",
+    "matching_scores": "tensor[0, 15, 15] n=0 \u001b[38;2;127;127;127mempty\u001b[0m grad SubBackward0 cuda:1",
+    "ref_corr_points": "tensor[0, 3] n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:1",
+    "src_corr_points": "tensor[0, 3] n=0 \u001b[38;2;127;127;127mempty\u001b[0m cuda:1",
+    "corr_scores": "tensor[0] \u001b[38;2;127;127;127mempty\u001b[0m cuda:1",
+    "estimated_transform": "tensor[4, 4] n=16 x∈[0., 1.000] μ=0.250 σ=0.447 cuda:1"
+}[0m

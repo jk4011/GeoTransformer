@@ -38,8 +38,16 @@ class Trainer(EpochBasedTrainer):
         self.evaluator = Evaluator(cfg).cuda()
 
     def train_step(self, epoch, iteration, data_dict):
+        import jhutil; jhutil.jhprint(1111, data_dict)
         output_dict = self.model(data_dict)
+        import jhutil;jhutil.jhprint(2222, output_dict)
+        
         loss_dict = self.loss_func(output_dict, data_dict)
+        # https://github.com/pytorch/pytorch/issues/43259#issuecomment-964284292
+        for param in self.model.parameters():
+            loss_dict['loss'] += param.sum() * 0
+        
+        
         result_dict = self.evaluator(output_dict, data_dict)
         loss_dict.update(result_dict)
         return output_dict, loss_dict
@@ -60,3 +68,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+     

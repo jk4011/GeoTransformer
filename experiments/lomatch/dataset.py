@@ -82,9 +82,14 @@ def test_data_loader(cfg, benchmark):
     #     augmentation_noise=cfg.train.augmentation_noise,
     #     augmentation_rotation=cfg.train.augmentation_rotation,
     # )
+    # FIXME: 스파게티
+    cfg2 = jhutil.load_yaml("/data/wlsgur4011/part_assembly/yamls/data_example.yaml")
+    dataname = cfg2.data.data_fn.split(".")[0]
     
-    datafolder = "/data/wlsgur4011/DataCollection/BreakingBad/data_split/"
-    artifact_train = f"{datafolder}artifact.train.pth"
+    datafolder = "/data/wlsgur4011/DataCollection/BreakingBad/data_split"
+    artifact_train = f"{datafolder}/{dataname}.train.pth"
+    
+    jhutil.jhprint(0000, artifact_train)
     train_dataset = PairBreakingBadDataset(artifact_train)
     test_dataset = train_dataset
     
