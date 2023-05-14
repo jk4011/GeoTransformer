@@ -45,8 +45,8 @@ class BaseTester(abc.ABC):
             raise RuntimeError('Snapshot is not specified.')
 
         # print config
-        message = 'Configs:\n' + json.dumps(cfg, indent=4)
-        self.logger.info(message)
+        # message = 'Configs:\n' + json.dumps(cfg, indent=4)
+        # self.logger.info(message)
 
         # cuda and distributed
         if not torch.cuda.is_available():

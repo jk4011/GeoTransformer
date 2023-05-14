@@ -94,7 +94,10 @@ class EpochBasedTrainer(BaseTrainer):
             # forward
             output_dict, result_dict = self.train_step(self.epoch, self.inner_iteration, data_dict)
             # backward & optimization
-            result_dict['loss'].backward()
+            if self.lightning:
+                self.fabric.backward('loss')
+            else:
+                result_dict['loss'].backward()
             self.after_backward(self.epoch, self.inner_iteration, data_dict, output_dict, result_dict)
             self.check_gradients(self.epoch, self.inner_iteration, data_dict, output_dict, result_dict)
             self.optimizer_step(self.inner_iteration)

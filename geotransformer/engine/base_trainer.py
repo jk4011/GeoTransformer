@@ -53,8 +53,8 @@ class BaseTrainer(abc.ABC):
         self.logger.info(message)
 
         # print config
-        message = 'Configs:\n' + json.dumps(cfg, indent=4)
-        self.logger.info(message)
+        # message = 'Configs:\n' + json.dumps(cfg, indent=4)
+        # self.logger.info(message)
 
         # tensorboard
         self.writer = SummaryWriter(log_dir=cfg.event_dir)
@@ -182,8 +182,8 @@ class BaseTrainer(abc.ABC):
             local_rank = self.local_rank
             model = nn.parallel.DistributedDataParallel(model, device_ids=[local_rank], output_device=local_rank)
         self.model = model
-        message = 'Model description:\n' + str(model)
-        self.logger.info(message)
+        # message = 'Model description:\n' + str(model)
+        # self.logger.info(message)
         return model
 
     def register_optimizer(self, optimizer):
