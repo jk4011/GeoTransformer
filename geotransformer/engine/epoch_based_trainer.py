@@ -86,16 +86,23 @@ class EpochBasedTrainer(BaseTrainer):
         self.optimizer.zero_grad()
         total_iterations = len(self.train_loader)
         for iteration, data_dict in enumerate(self.train_loader):
+            if data_dict["lengths"][-1][0] * data_dict["lengths"][-1][1] > 3e5:
+                continue
+            # import jhutil; jhutil.jhprint(0000, data_dict["lengths"][-1][0] * data_dict["lengths"][-1][1])
+            
             self.inner_iteration = iteration + 1
             self.iteration += 1
-            data_dict = to_cuda(data_dict)
+            # data_dict = to_cuda(data_dict)
             self.before_train_step(self.epoch, self.inner_iteration, data_dict)
             self.timer.add_prepare_time()
             # forward
-            output_dict, result_dict = self.train_step(self.epoch, self.inner_iteration, data_dict)
+            try:
+                output_dict, result_dict = self.train_step(self.epoch, self.inner_iteration, data_dict)
+            except:
+                continue
             # backward & optimization
             if self.lightning:
-                self.fabric.backward('loss')
+                self.fabric.backward(result_dict['loss'])
             else:
                 result_dict['loss'].backward()
             self.after_backward(self.epoch, self.inner_iteration, data_dict, output_dict, result_dict)
@@ -146,7 +153,11 @@ class EpochBasedTrainer(BaseTrainer):
             data_dict = to_cuda(data_dict)
             self.before_val_step(self.epoch, self.inner_iteration, data_dict)
             timer.add_prepare_time()
-            output_dict, result_dict = self.val_step(self.epoch, self.inner_iteration, data_dict)
+            
+            try:
+                output_dict, result_dict = self.val_step(self.epoch, self.inner_iteration, data_dict)
+            except:
+                continue
             torch.cuda.synchronize()
             timer.add_process_time()
             self.after_val_step(self.epoch, self.inner_iteration, data_dict, output_dict, result_dict)

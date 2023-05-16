@@ -11,6 +11,7 @@ from model import create_model
 from loss import OverallLoss, Evaluator
 import lightning as L
 from deepspeed.runtime.lr_schedules import WarmupDecayLR, LRRangeTest
+from deepspeed.ops.adam import DeepSpeedCPUAdam
 
 
 class Trainer(EpochBasedTrainer):
@@ -30,15 +31,19 @@ class Trainer(EpochBasedTrainer):
         self.lightning = lightning
         # model, optimizer, scheduler
         if lightning:
-            
-            self.fabric = L.Fabric(accelerator="cuda", devices=2, strategy="deepspeed_stage_2", precision="16-mixed")
+            self.fabric = L.Fabric(accelerator="cuda", devices="auto",
+                                   strategy="deepspeed_stage_2_offload", precision="16-mixed")
             self.fabric.launch()
-            
-            
+
             self.model = create_model(cfg)
-            self.optimizer = optim.Adam(self.model.parameters(), lr=cfg.optim.lr, weight_decay=cfg.optim.weight_decay)
-            self.scheduler = optim.lr_scheduler.StepLR(self.optimizer, cfg.optim.lr_decay_steps, gamma=cfg.optim.lr_decay)
-            
+            # self.optimizer = optim.Adam(self.model.parameters(), lr=cfg.optim.lr, weight_decay=cfg.optim.weight_decay)
+
+            self.optimizer = DeepSpeedCPUAdam(self.model.parameters(), lr=cfg.optim.lr,
+                                              weight_decay=cfg.optim.weight_decay)
+
+            self.scheduler = optim.lr_scheduler.StepLR(
+                self.optimizer, cfg.optim.lr_decay_steps, gamma=cfg.optim.lr_decay)
+
             self.model, self.optimizer = self.fabric.setup(self.model, self.optimizer)
 
             self.train_loader = self.fabric.setup_dataloaders(self.train_loader)
