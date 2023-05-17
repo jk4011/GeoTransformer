@@ -1,3 +1,5 @@
+import jhutil
+from multi_part_assembly.datasets.geometry_data import build_geometry_dataset, build_geometry_dataloader
 from geotransformer.datasets.registration.threedmatch.dataset import ThreeDMatchPairDataset
 from geotransformer.utils.data import (
     registration_collate_fn_stack_mode,
@@ -11,26 +13,33 @@ import torch
 import sys
 sys.path.append("/data/wlsgur4011/part_assembly")
 
-from multi_part_assembly.datasets.geometry_data import build_geometry_dataset, build_geometry_dataloader
-from util.data import PairBreakingBadDataset
-import jhutil
 
-def train_valid_data_loader(cfg, distributed):
-    # train_dataset = ThreeDMatchPairDataset(
-    #     cfg.data.dataset_root,
-    #     'train',
-    #     point_limit=cfg.train.point_limit,
-    #     use_augmentation=cfg.train.use_augmentation,
-    #     augmentation_noise=cfg.train.augmentation_noise,
-    #     augmentation_rotation=cfg.train.augmentation_rotation,
-    # )
-    
-    datafolder = "/data/wlsgur4011/DataCollection/BreakingBad/data_split/"
-    artifact_train = f"{datafolder}artifact.train.pth"
-    artifact_val = f"{datafolder}artifact.val.pth"
-    train_dataset = PairBreakingBadDataset(artifact_train)
-    valid_dataset = PairBreakingBadDataset(artifact_val)
-    
+def train_valid_data_loader(cfg, distributed, part_assembly=True):
+
+    if part_assembly:
+        from util.data import PairBreakingBadDataset
+
+        datafolder = "/data/wlsgur4011/DataCollection/BreakingBad/data_split/"
+        artifact_train = f"{datafolder}artifact.train.pth"
+        artifact_val = f"{datafolder}artifact.val.pth"
+        train_dataset = PairBreakingBadDataset(artifact_train)
+        valid_dataset = PairBreakingBadDataset(artifact_val)
+    else:
+        train_dataset = ThreeDMatchPairDataset(
+            cfg.data.dataset_root,
+            'train',
+            point_limit=cfg.train.point_limit,
+            use_augmentation=cfg.train.use_augmentation,
+            augmentation_noise=cfg.train.augmentation_noise,
+            augmentation_rotation=cfg.train.augmentation_rotation,
+        )
+        valid_dataset = ThreeDMatchPairDataset(
+            cfg.data.dataset_root,
+            'val',
+            point_limit=cfg.test.point_limit,
+            use_augmentation=False,
+        )
+
     neighbor_limits = calibrate_neighbors_stack_mode(
         train_dataset,
         registration_collate_fn_stack_mode,
@@ -51,12 +60,6 @@ def train_valid_data_loader(cfg, distributed):
         distributed=distributed,
     )
 
-    # valid_dataset = ThreeDMatchPairDataset(
-    #     cfg.data.dataset_root,
-    #     'val',
-    #     point_limit=cfg.test.point_limit,
-    #     use_augmentation=False,
-    # )
     valid_loader = build_dataloader_stack_mode(
         valid_dataset,
         registration_collate_fn_stack_mode,
@@ -73,26 +76,35 @@ def train_valid_data_loader(cfg, distributed):
     return train_loader, valid_loader, neighbor_limits
 
 
-def test_data_loader(cfg, benchmark):
-    # train_dataset = ThreeDMatchPairDataset(
-    #     cfg.data.dataset_root,
-    #     'train',
-    #     point_limit=cfg.train.point_limit,
-    #     use_augmentation=cfg.train.use_augmentation,
-    #     augmentation_noise=cfg.train.augmentation_noise,
-    #     augmentation_rotation=cfg.train.augmentation_rotation,
-    # )
-    # FIXME: 스파게티
-    cfg2 = jhutil.load_yaml("/data/wlsgur4011/part_assembly/yamls/data_example.yaml")
-    dataname = cfg2.data.data_fn.split(".")[0]
-    
-    datafolder = "/data/wlsgur4011/DataCollection/BreakingBad/data_split"
-    artifact_train = f"{datafolder}/{dataname}.train.pth"
-    
-    jhutil.jhprint(0000, artifact_train)
-    train_dataset = PairBreakingBadDataset(artifact_train)
-    test_dataset = train_dataset
-    
+def test_data_loader(cfg, benchmark, part_assembly=True):
+    if part_assembly:
+        from util.data import PairBreakingBadDataset
+        # FIXME: 스파게티
+        cfg2 = jhutil.load_yaml("/data/wlsgur4011/part_assembly/yamls/data_example.yaml")
+        dataname = cfg2.data.data_fn.split(".")[0]
+
+        datafolder = "/data/wlsgur4011/DataCollection/BreakingBad/data_split"
+        artifact_train = f"{datafolder}/{dataname}.train.pth"
+
+        jhutil.jhprint(0000, artifact_train)
+        train_dataset = PairBreakingBadDataset(artifact_train)
+        test_dataset = train_dataset
+    else:
+        train_dataset = ThreeDMatchPairDataset(
+            cfg.data.dataset_root,
+            'train',
+            point_limit=cfg.train.point_limit,
+            use_augmentation=cfg.train.use_augmentation,
+            augmentation_noise=cfg.train.augmentation_noise,
+            augmentation_rotation=cfg.train.augmentation_rotation,
+        )
+        test_dataset = ThreeDMatchPairDataset(
+            cfg.data.dataset_root,
+            benchmark,
+            point_limit=cfg.test.point_limit,
+            use_augmentation=False,
+        )
+
     neighbor_limits = calibrate_neighbors_stack_mode(
         train_dataset,
         registration_collate_fn_stack_mode,
@@ -101,13 +113,6 @@ def test_data_loader(cfg, benchmark):
         cfg.backbone.init_radius,
     )
 
-    # test_dataset = ThreeDMatchPairDataset(
-    #     cfg.data.dataset_root,
-    #     benchmark,
-    #     point_limit=cfg.test.point_limit,
-    #     use_augmentation=False,
-    # )
-    
     test_loader = build_dataloader_stack_mode(
         test_dataset,
         registration_collate_fn_stack_mode,
