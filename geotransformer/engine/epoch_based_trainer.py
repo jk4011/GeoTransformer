@@ -98,7 +98,8 @@ class EpochBasedTrainer(BaseTrainer):
             # forward
             try:
                 output_dict, result_dict = self.train_step(self.epoch, self.inner_iteration, data_dict)
-            except:
+            except Exception as e:
+                import jhutil; jhutil.jhprint(1111, e)
                 continue
             # backward & optimization
             if self.lightning:
