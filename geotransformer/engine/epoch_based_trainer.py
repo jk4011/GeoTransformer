@@ -86,7 +86,10 @@ class EpochBasedTrainer(BaseTrainer):
         self.optimizer.zero_grad()
         total_iterations = len(self.train_loader)
         for iteration, data_dict in enumerate(self.train_loader):
-            if data_dict["lengths"][-1][0] * data_dict["lengths"][-1][1] > 3e5:
+            if data_dict["lengths"][-1][0] <= 5 or \
+               data_dict["lengths"][-1][1] <= 5:
+                continue
+            if data_dict["lengths"][-1][0] * data_dict["lengths"][-1][1] > 5e5:
                 continue
             # import jhutil; jhutil.jhprint(0000, data_dict["lengths"][-1][0] * data_dict["lengths"][-1][1])
             

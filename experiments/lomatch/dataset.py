@@ -17,7 +17,7 @@ sys.path.append("/data/wlsgur4011/part_assembly")
 def train_valid_data_loader(cfg, distributed, part_assembly=True):
 
     if part_assembly:
-        from util.data import PairBreakingBadDataset
+        from part_assembly.data_stage3 import PairBreakingBadDataset
 
         datafolder = "/data/wlsgur4011/DataCollection/BreakingBad/data_split/"
         artifact_train = f"{datafolder}artifact.train.pth"
@@ -78,7 +78,7 @@ def train_valid_data_loader(cfg, distributed, part_assembly=True):
 
 def test_data_loader(cfg, benchmark, part_assembly=True):
     if part_assembly:
-        from util.data import PairBreakingBadDataset
+        from part_assembly.data_stage3 import PairBreakingBadDataset
         # FIXME: 스파게티
         cfg2 = jhutil.load_yaml("/data/wlsgur4011/part_assembly/yamls/data_example.yaml")
         dataname = cfg2.data.data_fn.split(".")[0]

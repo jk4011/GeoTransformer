@@ -11,3 +11,4 @@ data/Kitti/downsampled
 data/ModelNet/*.pkl
 weights
 data/3DMatch/data
+*tmp*

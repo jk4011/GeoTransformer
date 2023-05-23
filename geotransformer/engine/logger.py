@@ -30,7 +30,7 @@ def create_logger(log_file=None):
     colored_formatter = coloredlogs.ColoredFormatter(format_str)
 
     logging_handler_out = logging.StreamHandler(sys.stdout)
-    logging_handler_out.setLevel(logging.DEBUG)
+    logging_handler_out.setLevel(logging.INFO)
     logging_handler_out.addFilter(LessThanFilter(logging.WARNING))
     logging_handler_out.setFormatter(colored_formatter)
     logger.addHandler(logging_handler_out)

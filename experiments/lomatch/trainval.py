@@ -32,14 +32,14 @@ class Trainer(EpochBasedTrainer):
         # model, optimizer, scheduler
         if lightning:
             self.fabric = L.Fabric(accelerator="cuda", devices="auto",
-                                   strategy="deepspeed_stage_2_offload")
+                                   strategy="deepspeed_stage_2")
             self.fabric.launch()
 
             self.model = create_model(cfg)
 
-            # self.optimizer = optim.Adam(self.model.parameters(), lr=cfg.optim.lr, weight_decay=cfg.optim.weight_decay)
-            self.optimizer = DeepSpeedCPUAdam(self.model.parameters(), lr=cfg.optim.lr,
-                                              weight_decay=cfg.optim.weight_decay)
+            self.optimizer = optim.Adam(self.model.parameters(), lr=cfg.optim.lr, weight_decay=cfg.optim.weight_decay)
+            # self.optimizer = DeepSpeedCPUAdam(self.model.parameters(), lr=cfg.optim.lr,
+            #                                   weight_decay=cfg.optim.weight_decay)
 
             self.scheduler = optim.lr_scheduler.StepLR(
                 self.optimizer, cfg.optim.lr_decay_steps, gamma=cfg.optim.lr_decay)
