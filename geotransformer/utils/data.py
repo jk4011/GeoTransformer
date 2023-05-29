@@ -11,7 +11,7 @@ from geotransformer.utils.torch import build_dataloader
 
 
 def precompute_data_stack_mode(points, lengths, num_stages, voxel_size, radius, neighbor_limits):
-    assert num_stages == len(neighbor_limits)
+    assert num_stages == len(neighbor_limits), f"{num_stages} differs from {len(neighbor_limits)}"
 
     points_list = []
     lengths_list = []
@@ -248,3 +248,4 @@ def build_dataloader_stack_mode(
         distributed=distributed,
     )
     return dataloader
+

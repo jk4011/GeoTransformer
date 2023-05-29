@@ -12,3 +12,5 @@ data/ModelNet/*.pkl
 weights
 data/3DMatch/data
 *tmp*
+tmp
+experiments/lomatch/tmp
