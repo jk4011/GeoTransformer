@@ -69,7 +69,7 @@ class Tester(SingleTester):
         ref_file_name = data_dict['ref_file_name'].split('.')[0]
         
         # todo : 스파게티 코드 수정
-        self.output_dir = "/data/wlsgur4011/part_assembly/result"
+        self.output_dir = "/data2/wlsgur4011/FRASIER/result"
         ensure_dir(osp.join(self.output_dir, scene_name))
         file_name = osp.join(self.output_dir, scene_name, f'{src_file_name}:{ref_file_name}.npz')
         

@@ -12,7 +12,7 @@ import numpy as np
 
 # todo : 스파게티 코드 수정
 import sys
-sys.path.append("/data/wlsgur4011/part_assembly")
+sys.path.append("/data2/wlsgur4011/FRASIER")
 
 
 def train_valid_data_loader(cfg, distributed, part_assembly=True):
@@ -81,7 +81,7 @@ def test_data_loader(cfg, benchmark, part_assembly=True):
     if part_assembly:
         from part_assembly.stage3_data import Stage3PairDataset
         # FIXME: 스파게티
-        cfg2 = jhutil.load_yaml("/data/wlsgur4011/part_assembly/yamls/data_example.yaml")
+        cfg2 = jhutil.load_yaml("/data2/wlsgur4011/FRASIER/yamls/data_example.yaml")
         dataname = cfg2.data.data_fn.split(".")[0]
 
         datafolder = "/data/wlsgur4011/DataCollection/BreakingBad/data_split"
